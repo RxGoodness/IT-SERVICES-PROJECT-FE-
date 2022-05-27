@@ -1,0 +1,8 @@
+.about_solutions_container {
+    padding: 8% 10% 4% 10%;
+    background: var(--secondary-color);
+
+    @media screen and (max-width: 900px) {
+        padding: 2rem 1rem 1rem 1rem;
+    }
+}

@@ -1,0 +1,103 @@
+.standout {
+    padding: 3rem 10%;
+    background: var(--secondary-color);
+
+    .standout_container {
+        display: flex;
+        justify-content: center;
+
+        .standout_title {
+            width: 40%;
+            text-align: center;
+            
+            h1 {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .standout_content {
+      display: flex;
+      margin-top: 4rem;
+      
+        .standout_text {
+            width: 50%;
+            padding-right: 2rem;
+
+            p {
+                font-size: 1rem;
+                color: var(--black-color);
+            }
+        }
+
+        .standout_img {
+            width: 50%;
+            padding-left: 2rem;
+
+            img {
+                width: 100%;
+                object-fit: fill;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 900px) {
+        padding: 3rem 2rem;
+        .standout_container {
+
+            .standout_title {
+                width: 70%;
+                text-align: center; 
+            }
+        }
+
+        .standout_content {
+            flex-direction: column-reverse;
+            margin-top: 3rem;
+
+            .standout_text {
+                width: 100%;
+                padding-right: 0;
+                margin-top: 2rem;
+            }
+
+            .standout_img {
+                width: 100%;
+                padding-left: 0;
+
+                img {
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .standout_container {
+    
+            .standout_title {
+                width: 80%;
+                text-align: center; 
+
+                h1 {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 320px){ 
+        padding: 4rem 1rem;
+        .standout_container {
+    
+            .standout_title {
+                width: 100%; 
+
+                h1 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}

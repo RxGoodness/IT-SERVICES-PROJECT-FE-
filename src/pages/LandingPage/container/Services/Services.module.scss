@@ -1,0 +1,42 @@
+.service_container {
+    background: var(--primary-color);
+    padding: 5rem 5rem;
+
+    h1 {
+        text-align: center;
+        color: var(--white-color);
+    }
+
+    .service_cards_section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1.3rem 0;
+
+        @media screen and (max-width: 900px) {
+            // flex-direction: column;
+        }
+
+        @media screen and (max-width: 550px) {
+            flex-direction: column;
+        }
+    }
+
+    .small {
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: var(--white-color);
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        padding: 4rem 2rem;
+    }
+
+    @media screen and (max-width: 320px) {
+        padding: 4rem 1rem;
+    }
+}

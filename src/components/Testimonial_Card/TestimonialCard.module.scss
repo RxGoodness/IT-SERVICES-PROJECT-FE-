@@ -1,0 +1,28 @@
+.testimonial_card {
+    width: 40%;;
+    p {
+        font-size: 0.8rem;
+        line-height: 25px;
+    }
+
+    .testimonial_card_footer {
+        text-align: end;
+        margin-right: 1rem 6rem 0 0;
+    }
+
+    @media screen and (max-width: 900px) {
+        width: 45%;
+
+        .testimonial_card_footer {
+            margin: 1rem 3rem 0 0;
+        }
+    }
+    @media screen and (max-width: 550px) {
+        width: 100%;
+        margin-top: 2rem;
+
+        .testimonial_card_footer {
+            margin: 1rem 2rem 0 0;
+        }
+    }
+}
