@@ -1,0 +1,91 @@
+.navbar__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    background-color: var(--white-color);
+    position: relative;
+
+    .navbar__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        img {
+            width: 130px;
+        }
+    }
+
+    .nav_links_mobile{
+        display: none;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 0.6rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--primary-color);
+
+        .navbar__logo {
+            img {
+                width: 100px;
+            }
+        }
+
+        .nav__items {
+            display: none;
+        }
+
+        .nav_links_mobile {
+            display: block;
+            // padding: 0.6rem 1rem;
+
+            svg {
+                cursor: pointer;
+            }
+
+            .navbar_links_mb_container {
+                position: absolute;
+                left: 0;
+                top: 65px;
+                width: 100%;
+                height: 18rem;
+                padding: 0.6rem 1rem;
+                z-index: 3;
+                background-color: var(--primary-color);
+                
+
+                li {
+                    margin: 0 1rem;
+                    cursor: pointer;
+                    flex-direction: column;
+                    list-style: none;
+                    margin: 1rem 0;
+    
+                    a {
+                        color: var(--white-color);
+                        text-decoration: none;
+                        flex-direction: column;
+                        font-weight: 500;
+                        transition: all 0.3s ease-in-out;
+            
+                        &:hover {
+                            color: var(--gray-color);
+                        }
+                    }
+                }
+                @media screen and (max-width: 550px) {
+                    // top: 65px;
+                }
+            }
+        }
+    }
+
+    
+}
+
+
+

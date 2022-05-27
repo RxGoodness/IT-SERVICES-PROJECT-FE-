@@ -1,17 +1,10 @@
 import React from 'react';
 import './App.css';
-import ContactUs from './components/contactUs/ContactUs'
-import Footer from './components/footer/Footer'
+import Navigation from './Navigations/Navigation';
 
 function App() {
   return (
-    <>
-    <ContactUs />
-    <Footer />
-
-    </>
-   
-
+    <Navigation />
   );
 }
 

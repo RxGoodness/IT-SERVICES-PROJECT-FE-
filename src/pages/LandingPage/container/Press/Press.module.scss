@@ -1,0 +1,74 @@
+.press {
+    padding: 3rem 10%;
+    background: var(--primary-color);
+    .press_title {
+        text-align: center;
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--white-color);
+
+            @media screen and (max-width: 550px) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .press_content {
+        display: flex;
+        margin-top: 4rem;
+        justify-content: space-between;
+
+        .press_card {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 1rem;
+            width: 32%;
+            background: var(--lightGray-color);
+            border-radius: 15px;
+
+            h4 {
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            p {
+                margin-top: 1rem;
+                font-size: 1rem;
+                color: var(--black-color);
+                line-height: 25px;  
+            }
+            .small {
+                margin-top: 1rem;
+                a {
+                    text-decoration: none;
+                    color: var(--black-color);
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 3rem 2rem;
+
+        
+    }
+
+    @media screen and (max-width: 550px) {
+        .press_content {
+            flex-direction: column;
+            margin-top: 0;
+            
+
+            .press_card {
+                width: 100%;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        padding: 4rem 1rem;
+    }
+}

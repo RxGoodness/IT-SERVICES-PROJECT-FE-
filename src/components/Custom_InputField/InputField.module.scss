@@ -1,0 +1,38 @@
+.input_field_container {
+    width: 100%;
+    .textinput, .input_with_radius, .textinput_textarea, .lg_textinput {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        
+        width: 100%;
+        font-size: 16px;
+        color: #555;
+        outline: none;
+
+        &:focus {
+            border: 1px solid #aaa;
+        }
+    }
+
+    .textinput{
+        height: 5vmax;
+        padding: 10px;
+    }
+
+    .input_with_radius {
+        border-radius: 30px;
+        padding: 15px;
+    }
+
+    .textinput_textarea {
+        min-height: 120px;
+        resize: none;
+        padding: 15px;
+    }
+
+    .lg_textinput {
+        min-height: 160px;
+        resize: none;
+        padding: 15px;
+    }
+}
