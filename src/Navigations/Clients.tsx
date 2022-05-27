@@ -16,6 +16,7 @@ import Partner from '../pages/Partner/Partner'
 import ProjectDetails from '../pages/ProjectDetails/ProjectDetails'
 import Projects from '../pages/Projects/Projects'
 import Services from '../pages/Services/Services'
+import Footer from '../components/footer/Footer'
 
 const Clients = () => {
   return (
@@ -39,6 +40,7 @@ const Clients = () => {
         <Route path="/partner" element={<JoinUs />} />
         <Route path="/services" element={<Services />} />
       </Routes>
+    <Footer />
     </div>
     
   )
