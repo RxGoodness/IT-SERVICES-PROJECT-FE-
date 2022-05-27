@@ -1,9 +1,17 @@
 import React from 'react';
 import './App.css';
+import ContactUs from './components/contactUs/ContactUs'
+import Footer from './components/footer/Footer'
 
 function App() {
   return (
-    <h1>Hello world</h1>
+    <>
+    <ContactUs />
+    <Footer />
+
+    </>
+   
+
   );
 }
 

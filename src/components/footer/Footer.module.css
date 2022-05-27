@@ -1,0 +1,48 @@
+.background{
+    background: #303030;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 70px;
+}
+
+.icons img{
+    padding: 1.5rem
+}
+.content {
+    width: 80%;
+    margin: 0 auto 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.textContent {
+    margin-right: 10px;; 
+}
+
+.textContent  h3{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.textContent p {
+    padding: 0.8rem 0; 
+}
+
+.about{
+    /* display: flex;
+    justify-content: center; */
+    width: 50%;
+    text-align: center;
+    margin: 0 auto 50px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 36px;
+}
