@@ -1,12 +1,12 @@
 import ButtonStyle from './Button.module.scss'
 interface btnType {
     children: React.ReactNode,
-    defaultStyle?: boolean,
+    secondaryStyle?: boolean,
     handleClick?: () => void,
 }
-const Button = ({children, defaultStyle, handleClick} : btnType ) => {
+const Button = ({children, secondaryStyle, handleClick} : btnType ) => {
   return (
-    <button onClick={handleClick} className={ButtonStyle.defaultBtn}>
+    <button onClick={handleClick} className={ secondaryStyle ? ButtonStyle.secondarybtn : ButtonStyle.defaultBtn}>
       {children}
     </button>
   )

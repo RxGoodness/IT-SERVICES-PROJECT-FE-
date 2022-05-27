@@ -1,0 +1,185 @@
+.location {
+    padding: 5rem 10% 4rem 10%;
+    background: var(--primary-color);
+
+    .location_container_title {
+        text-align: center;
+        color: var(--white-color);
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+
+        @media screen and (max-width: 550px) {
+
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media(max-width: 320px){ 
+            h1 {
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .location_content_container {
+        margin-top: 6rem;
+        display: flex;
+        justify-content: center;
+        padding: 0 3rem 0 3rem;
+
+        .location_space_container{
+            display: flex;
+            justify-content: space-between;
+
+            .location_content {
+                width: 26%;
+                .location_content_img{
+                    width: 100%;
+    
+                    img {
+                        width: 100%;
+                        object-fit: fill;
+                    }
+                }
+    
+                h2 {
+                    text-align: center;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    color: var(--white-color);
+                    margin-top: 2.1rem;
+    
+                }
+    
+                .img_text {
+                    margin-top: 1.2rem;
+                    display: flex;
+                    align-items: center;
+                    
+                 
+                    img {
+                        width: 1.4rem;
+                        margin-right: 2rem;
+                    }
+    
+                    p {
+                        font-size: 1rem;
+                        color: var(--white-color);
+                    }
+                }
+    
+    
+    
+                @media screen and (max-width: 900px) {
+                    width: 35%;
+                }
+            
+                @media screen and (max-width: 550px) {
+                    width: 100%;
+                    margin-top: 4rem;
+
+                }
+            }
+
+            @media screen and (max-width: 550px) {
+                flex-direction: column;
+
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            
+            padding: 0;
+            width: 100%;
+
+            margin-top: 0;
+        }
+        
+    }
+
+    .location_contact {
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 5rem;
+            color: var(--white-color);
+        }
+
+        .contact_form {
+            margin-top: 2rem;
+            
+            .contact_content {
+                display: flex;
+                
+
+                .aside_left {
+                    flex: 1;
+                    padding-right: 3%;
+                    .mata_input {
+                        margin-top: 2rem;
+                    }
+                }
+
+                .aside_right {
+                    flex: 1;
+                   
+                }
+
+                
+            }
+
+            .contact_btn {
+                margin-top: 2rem;
+            }
+
+            @media screen and (max-width: 900px) {
+                .contact_content {
+                    .aside_left {
+                        padding-right: 0;
+                        .mata_input {
+                            margin-top: 3.6rem;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 900px) {
+                .contact_content {
+                    flex-direction: column;
+                    .aside_left {
+                        .mata_input {
+                            margin-top: 1.5rem;
+                        }
+                    }
+
+                    .aside_right {
+                        margin-top: 1.5rem;
+                       
+                    }
+                }
+
+                .contact_btn {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 4rem 2rem;
+    }
+
+    @media screen and (max-width: 550px) {
+        padding: 4rem 2rem;
+    }
+
+    @media screen and (max-width: 320px) {
+        padding: 4rem 1rem;
+    }
+}

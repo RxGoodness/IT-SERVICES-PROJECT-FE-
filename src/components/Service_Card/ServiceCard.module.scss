@@ -1,0 +1,89 @@
+.service__card {
+    width: 30%;
+    position: relative;
+    margin-top: 3rem;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        height: 28vmax;
+        background: rgba(95, 34, 100, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        transition: .7s ease;
+        opacity: 1;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        z-index: 1;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        position: relative;
+        height: 28vmax;
+        object-fit: cover;
+    }
+
+    .service_content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 17%;
+        z-index: 2;
+        color: var(--white-color);
+        padding: 1rem;
+        
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-align: start;
+        }
+
+        p {
+            font-size: 0.9rem;
+            line-height: 28px;
+            margin-top: 1rem;
+        }
+
+        @media(max-width: 320px){
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        width: 48%;
+        margin-top: 2rem;
+
+        .overlay {
+            height: 40vmax;
+        }
+        img {
+            height: 40vmax;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        width: 100%;
+
+        .overlay {
+            height: 50vmax;
+        }
+        img {
+            height: 50vmax;
+        }
+    }
+
+    @media(max-width: 320px){
+        .overlay {
+            height: 70vmax;
+        }
+        img {
+            height: 70vmax;
+        } 
+    }
+}
