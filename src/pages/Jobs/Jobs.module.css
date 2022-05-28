@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
+
+:root {
+    /* Colors */
+    --purple: #5F2264;
+    --black: #303030;
+    --grey: #F1F1F1;
+    --white: #FFFFFF;
+    /* Typograpghy */
+    --poppins: 'Poppins',
+        sans-serif;
+
+    --fs-1: 1.875rem;
+    --fs-2: 1.5rem;
+    --fs-3: 1.063rem;
+    --fs-4: 0.875rem;
+    --fs-5: 0.813rem;
+
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    /**
+   * transition
+   */
+
+    --transition: 0.25s ease;
+    --transition-2: 0.5s ease;
+
+    /**
+   * spacing
+   */
+
+    --section-padding: 60px;
+
+    /**
+   * border radius
+   */
+
+    --radius-4: 4px;
+    --radius-8: 8px;
+    --radius-12: 12px;
+}
+
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+a,
+img,
+span,
+input,
+button {
+    display: block;
+}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+}
+
+html {
+    font-family: var(--poppins);
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--white);
+}
+
+/* Reused Style */
+.container {
+    padding: 10px 10px;
+}
+
+.h1,
+.h2,
+.h3,
+h4,
+h5 {
+    color: var(--black);
+    line-height: 1.2;
+}
+
+
+/* Hero */
+
+.hero {
+    background-image: url("../../assets/images/JobsPage/hero-career.png"),
+        linear-gradient(rgba(95, 34, 100, 0.5), rgba(95, 34, 100, 0.5));
+    background-blend-mode: overlay;
+    object-fit: cover;
+    repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    height: 600px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+}
+
+.hero .section_title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.hero .section_subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.4rem;
+    margin-top: 10px;
+}
+
+
+/* Careers */
+
+.careers {
+    padding: 40px 40px
+}
+
+.careers .section_title {
+    text-align: center;
+    font-weight: 700;
+}
+
+.careers .section_subtitle {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 20px;
+    text-align: center;
+}
+
+.careers_grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    justify-content: center;
+}
+
+
+/* Hiring */
+
+.hiring {
+    background-color: #5F2264;
+    padding: 40px 40px;
+    display: grid;
+    place-items: center;
+}
+
+.hiring .section_title {
+    text-align: center;
+    font-weight: 700;
+    color: white;
+}
+
+.hiring .section_subtitle {
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin: 20px;
+    text-align: center;
+    line-height: 1.3rem;
+    color: white;
+}
+
+.hiring_grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+}
+
+.single_hiring {
+    background-color: #C4C4C4;
+    padding: 0px 10px 30px;
+}
+
+.single_hiring .top {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    color: #303030;
+    text-align: center;
+}
+
+.single_hiring .bottom h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #5F2264;
+}
+
+.single_hiring .bottom h2 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.single_hiring .bottom p {
+    margin-top: 30px;
+    color: #303030;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+.hiring .btn {
+    margin-top: 30px;
+    background: white;
+    color: #5F2264;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+/* .arrows {
+    position: relative;
+} */
+
+.edit_next {
+    position: absolute;
+    right: -100px;
+    background-color: red;
+}
+
+.edit_prev {
+    position: absolute;
+    left: -100px;
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 10px 0px;
+    }
+
+    .hero .section_title {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}
+
+@media (min-width: 1006px) {
+    .container {
+        padding: 0px 80px
+    }
+
+    .careers_grid {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 50px;
+        grid-row-gap: 20px;
+    }
+}
