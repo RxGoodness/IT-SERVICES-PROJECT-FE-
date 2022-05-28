@@ -175,6 +175,11 @@ h5 {
     justify-content: center;
 }
 
+.loading {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 
 /* Hiring */
 

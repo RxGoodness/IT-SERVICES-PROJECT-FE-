@@ -6,6 +6,9 @@ import { BiChevronRight, BiChevronLeft, BiArrowBack } from 'react-icons/bi'
 import SingleJob from '../../components/Single_Job/SingleJob'
 import SingleOppurtunity from '../../components/SingleOppurtunity/SingleOppurtunity'
 import axios from 'axios'
+import Loader from '../../components/Loader/Loader'
+
+
 
 interface Job {
   _id: string | null
@@ -19,11 +22,14 @@ interface Job {
 
 const Jobs = () => {
   const [jobs, setJobs] = useState([])
-  const [careers, setCareers] = useState([1, 2, 3, 4, 5])
+  const [careers, setCareers] = useState([1, 2, 3, 4, 5]);
+  const [loading, setLoading] = useState(false)
 
   const getJobs = async () => {
+    setLoading(true)
     const response = await axios.get('https://appoga.herokuapp.com/jobs')
     setJobs(response.data)
+    setLoading(false)
   }
 
   useEffect(() => {
@@ -42,6 +48,8 @@ const Jobs = () => {
         </div>
       </section>
 
+
+
       {/* Careers Section */}
       <section className={JobsCss.careers}>
         <div className={JobsCss.container}>
@@ -50,7 +58,13 @@ const Jobs = () => {
             Reach out to us if you are have the skills and passion to be part of
             the growing IT industry
           </p>
-          <div className={JobsCss.careers_grid}>
+
+
+
+
+          {loading ? <div className={JobsCss.loading}>
+<Loader /> 
+</div> : <div className={JobsCss.careers_grid}>
             {jobs.map((job: Job) => {
               return (
                 <SingleJob
@@ -64,7 +78,9 @@ const Jobs = () => {
                 />
               )
             })}
-          </div>
+          </div>}
+
+          
         </div>
       </section>
 
