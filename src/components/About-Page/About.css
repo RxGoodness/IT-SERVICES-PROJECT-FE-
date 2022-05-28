@@ -1,0 +1,307 @@
+body {
+    box-sizing: border-box;
+    background: #F1F1F1;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 1920px;
+    /* height: 7830px; */
+    height: auto;
+    background: #F1F1F1;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: #F1F1F1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100vw;
+    height: 120px;
+}
+
+
+.appoga-Logo {
+    position: absolute;
+    left: 5.125rem;
+    top: 0.075rem;
+    width: 15.73rem;
+    height: 5.75rem;
+    background: url('../../assets/images/appoga-logo.png');
+}
+
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75vw;
+    min-height: 36px;
+}
+
+ul li {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 36px;
+    list-style-type: none;
+    text-align: center;
+    font-weight: 400;
+    color: #303030;
+    flex-basis: 10px;
+}
+
+.home {
+    width: 72px;
+    height: 36px;
+    left: 649px;
+    top: 42px;
+}
+
+.company {
+    width: 123px;
+    height: 36px;
+    left: 787px;
+    top: 42px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #5F2264;
+}
+
+.services {
+    width: 100px;
+    height: 36px;
+    left: 1002px;
+    top: 42px;
+}
+
+.products {
+    width: 106px;
+    height: 36px;
+    left: 1196px;
+    top: 42px;
+}
+
+.packages {
+    width: 117px;
+    height: 36px;
+    left: 1395px;
+    top: 42px;
+}
+
+.resources {
+    width: 124px;
+    height: 36px;
+    left: 1605px;
+    top: 42px;
+}
+
+/* SECTION */
+
+.about-appoga {
+    /* max-width: 61.93rem; */
+    max-width: 51.6%;
+    height: 54rem;
+    left: 0.5rem;
+    top: 0.125rem;
+}
+
+.appoga-special {
+    color: #5F2264;
+}
+
+.about-appoga h3 {
+    position: absolute;
+    white-space: pre;
+    width: 50vw;
+    height: 8.25rem;
+    left: 40vw;
+    top: 10.625rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 75px;
+    display: flex;
+
+    align-items: center;
+    text-align: center;
+    color: #303030;
+}
+
+
+.about-appoga .info {
+    position: absolute;
+    width: 50vw;
+    height: 120px;
+    left: 22.43rem;
+    top: 302px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #303030;
+}
+
+
+.group-pic .pic {
+    position: absolute;
+    height: 17.5rem;
+    filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.25));
+} 
+
+.pic-a {
+    width: 17.5rem;
+    left: 16.43rem;
+    top: 31.75rem;
+    background: url('../../assets/images/pic-a.png');
+    
+}
+
+.pic-b {
+    width: 17.5rem;
+    left: 39rem;
+    top: 31.75rem;
+    background: url('../../assets/images/pic-b.png');
+}
+
+.pic-c {
+    width: 17.31rem;
+    left: 61.06rem;
+    top: 31.75rem;
+    background: url('../../assets/images/pic-c.png');
+}
+
+.pic-d {
+    width: 17.4375rem;
+    left: 27rem;
+    top: 47.12rem;
+    background: url('../../assets/images/pic-d.png');
+}
+
+.pic-e {
+    width: 17.5rem;
+    left: 50.06rem;
+    top: 47.125rem;
+    background: url('../../assets/images/pic-e.png');
+}
+
+/* WE ARE APPOGA */
+
+.we-are-appoga {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 65.75rem;
+    top: 70.75rem;
+    background: #5F2264;
+    justify-content: space-evenly;
+}
+
+
+.para1 {
+    position: relative;
+    max-width: 452px;
+    height: 386px;
+    top: -2rem;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 36px;
+
+    color: #F1F1F1;
+}
+
+.para2 {
+    position: relative;
+    top: -9rem;
+    max-width: 462px;
+    height: 386px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #F1F1F1;
+}
+
+.para3 {
+    position: relative;
+    max-width: 462px;
+    height: 350px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #F1F1F1;
+    top: -7rem;
+}
+
+.para4 {
+    position: relative;
+    top: -3rem;
+    max-width: 462px;
+    height: 350px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #F1F1F1;
+    margin-top: -10rem;
+}
+
+.we-are {
+    max-width: 624px;
+    height: 132px;
+    margin-top: -4rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 75px;
+    text-align: center;
+    color: #F1F1F1;
+}
+
+.holdHands {
+    position: relative;
+    margin-left: -2rem;
+    width: 430px;
+    height: 462px;
+    top: -11rem;
+    background: url('../../assets/images/pic-f.png');
+    filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.one {
+    padding: 1.2rem;
+}
+
+
+/* OUR ACHIEVEMEMTS */
+
+
+
+
+
