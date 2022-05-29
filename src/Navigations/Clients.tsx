@@ -10,12 +10,14 @@ import ContactUs from '../pages/ContactUs/ContactUs'
 import Faq from '../pages/Faq/Faq'
 import JobApplication from '../pages/JobApplication/JobApplication'
 import Jobs from '../pages/Jobs/Jobs'
+import JobsDetails from '../pages/JobsDetails.tsx/JobsDetails'
 import JoinUs from '../pages/JoinUs/JoinUs'
 import LandingPage from '../pages/LandingPage/LandingPage'
 import Partner from '../pages/Partner/Partner'
 import ProjectDetails from '../pages/ProjectDetails/ProjectDetails'
 import Projects from '../pages/Projects/Projects'
 import Services from '../pages/Services/Services'
+
 
 const Clients = () => {
   return (
@@ -25,7 +27,7 @@ const Clients = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/jobs" element={<Jobs />} />
-        <Route path="/job/:id" element={<Jobs />} />
+        <Route path="/job/:id" element={<JobsDetails />} />
         <Route path="/jobApplication" element={<JobApplication />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projectDetails/:id" element={<ProjectDetails />} />
