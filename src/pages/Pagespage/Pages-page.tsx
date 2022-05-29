@@ -1,7 +1,7 @@
 import React from "react";
 import "./pages-page.css";
 import SearchIcon from "../../assets/image/Vector.png";
-// import landingPage from "./images/Landingpage.jpg";
+import landingPage from "../../assets/image/Landingpage.jpg";
 import Pagesnippet from "./Pagesnippet";
 import pageData from "../../utils/allpages"
 
@@ -17,7 +17,7 @@ const fakePageData: PageCard[] = [
     id: 1,
     page: "Home",
     url: "thisistheurl.com",
-    img: "./images/Vector.png",
+    img: "/image/pages/Web.png",
     date: "10th Jan 2020",
   },
 
@@ -51,13 +51,13 @@ const fakePageData: PageCard[] = [
   }
 ];
 
-let numberOfPages = pageData.length;
+let numberOfPages = fakePageData.length;
 
 function Pagespage() {
-  let pages = pageData.map((item) => {
+  let pages = fakePageData.map((item) => {
     return (
       <Pagesnippet
-        img={item.img}
+        img={landingPage}
         url={item.url}
         title={item.page}
         time={item.date}

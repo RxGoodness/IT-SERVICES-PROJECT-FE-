@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { ChangeEvent, FormEvent} from "react";
 import axios from "axios"
-import Navbar from "../../components/navbar/Navbar";
-import "./adminlogin.css";
+import LoginNav from "../../components/LoginNavBar/LoginNav";
+import adminCss from "./adminlogin.module.css";
 
 interface Login {
     email: string;
@@ -37,31 +37,41 @@ const Adminlogin = (props: Login) => {
       }).then(response => console.log(response.data))
 
  return (
-    <div className="form--design">
+   <div className={adminCss.overallContainer}>
+     <div>
+      <LoginNav />
+     </div>
+    
+    <div className={adminCss.formDesign}>
     <form onSubmit={handleSubmit}>
-      <label htmlFor="email" className="input--label">
+      <label htmlFor="email" className={adminCss.inputLabel}>
         Email
       </label>
       <input
         value={credentials.email}
         name="email"
-        className="input--field"
+        className={adminCss.inputField}
         onChange={handleChange}
       />
+      <div className={adminCss.meta}/>
 
-      <label htmlFor="password" className="input--label">Password</label>
-      <input type="password" value={credentials.password} name="password" className="input--field" onChange={handleChange} />
+      <label htmlFor="password" className={adminCss.inputLabel}>Password</label>
+      <input type="password" value={credentials.password} name="password" className={adminCss.inputField} onChange={handleChange} />
 
-      <div className="input--rem">
+      <div className={adminCss.meta}/>
+
+      <div className={adminCss.inputRem}>
 
       {/* <input type="checkbox" value="rmb" className="chk" id="rem" onClick= {handleSubmit} /> */}
-      <label className="input-label-check" htmlFor="rmb"> Remember me</label>
+      <label className={adminCss.inputLabelCheck} htmlFor="rmb"> Remember me</label>
 
-      <p className="lower-checks"> Forgot password?</p>
+      <p className={adminCss.lowerChecks}> Forgot password?</p>
       </div>
 
-      <button className="btn">Log In</button>
+      <button className={adminCss.btn}>Log In</button>
     </form>
+    </div>
+
     </div>
  )
 }
