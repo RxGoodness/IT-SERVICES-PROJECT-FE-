@@ -13,9 +13,8 @@ function Content() {
       const [email, setEmail] = useState('');
 
       const changeEmail = (e: ChangeEvent<HTMLInputElement>) => {
-        e.preventDefault();
-        const email = e.target.value
-        setEmail(email)
+        const email = e.target.value;
+        setEmail(email);
       }
 
       const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -24,9 +23,10 @@ function Content() {
 
         try {
           const body = { email };
-          !body.email && NotificationManager.error('Email is required!')
-          await axios.post('http://localhost:4000/reset-password/enter-email', body);
-          NotificationManager.success('Password Reset link sent to your email. Link will be valid for 15 min')
+          !body.email && NotificationManager.error('Email is required!');
+          await axios.post('https://appoga.herokuapp.com/reset-password/enter-email', body);
+          NotificationManager.success('Password Reset link sent to your email. Link will be valid for 15 min');
+          
         } catch (error: any) {
           error.message ? NotificationManager.error(error.response.data.msg) : NotificationManager.error("Something Went Wrong");
         }
