@@ -1,10 +1,7 @@
-import React from 'react';
-import './App.css';
+import Article from "./components/Articles/Article";
 
 function App() {
-  return (
-    <h1>Hello world</h1>
-  );
+  return <Article />;
 }
 
 export default App;
