@@ -66,4 +66,12 @@ const Adminlogin = (props: Login) => {
  )
 }
 
+// const [credentials, setCredentials] = useState({
+//   email: "",
+//   password: "",
+//   messageText: "",
+//   alert: false,
+//   styleType: "",
+// });
+
 export default Adminlogin
