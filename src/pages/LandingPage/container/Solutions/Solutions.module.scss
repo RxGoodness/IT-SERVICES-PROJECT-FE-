@@ -1,0 +1,47 @@
+.solutions_container {
+    padding: 1.5rem 0 0 0;
+
+    .solutions_container_title{
+        text-align: center;
+        color: var(--color-black);
+        line-height: 70px;
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        @media screen and (max-width: 550px) {
+            line-height: 40px;
+
+            p {
+                margin-top: 2rem;
+            }
+        }
+
+        @media(max-width: 320px){ 
+            h1 {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .solutions_container_cards {
+        margin-top: 30px;
+    }
+
+    @media screen and (max-width: 550px) {
+        padding: 3rem 0 0 0;
+    }
+
+    
+}

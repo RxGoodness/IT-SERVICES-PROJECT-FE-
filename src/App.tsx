@@ -1,7 +1,11 @@
-import Article from "./components/Articles/Article";
+import React from 'react';
+import './App.css';
+import Navigation from './Navigations/Navigation';
 
 function App() {
-  return <Article />;
+  return (
+    <Navigation />
+  );
 }
 
 export default App;

@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+    font-style: normal;
+}
+
+
+.top{
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    z-index: -1;
+    
+}
+
+.topText{
+    display: flex;
+    justify-content: center;
+    background: #5F2264;
+    opacity: 0.5;
+    padding-left: 162px;
+    padding-top: 179px;
+    padding-right: 44px;
+    
+}
+
+.topText p{
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 100px;
+    color: #F1F1F1;
+   
+    
+}
+
+.topImg > img{
+    /* background-image: url("../../assets/images/contactUs/contact.jpeg"); */
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    
+
+}
+
+/* helpline styling */
+
+.helpLine{
+    position: absolute;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+    margin: 0 auto;
+    gap: 24px;
+    top: 75%;
+    left: 0;
+    right: 0;
+   
+}
+
+.helpLine h3{
+    font-size: 1.2rem;
+    padding-bottom: 15px;
+}
+
+.helpLine_NGN, .helpLine_CAD{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 464px;
+    width: 100%;
+    background: #5F2264;
+    color: #F1F1F1;
+    margin: 0 auto;
+    
+
+    
+}
+
+.flagNGN, .flagCAD{
+    width: 60%;
+}
+
+.flagNGN > img,.flagCAD > img{
+  background-size: cover;
+  height: 150px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+
+.content{
+    display: flex;
+    align-items: center; 
+    padding: 0 40px;
+}
+
+.content > img{
+    margin: 15px;
+    height: 20px
+} 
+.content > p{
+    font-size: 0.9em;
+    padding-left: 15px;
+}
+
+/* middle section */
+
+.middle{
+    background: #E5E5E5;
+    min-height: 100vh;
+   
+    
+}
+
+.container{
+   
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 446px;
+    
+   
+}
+
+.middleHeader{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.middleHeader > h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 75px;
+    color: #303030;
+    margin-bottom: 20px;
+}
+.middleHeader > p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 36px;
+    color: #303030;
+    margin: 1rem;
+
+}
+
+.form_container{
+    width: 100%;
+    padding-bottom: 50px
+    
+}
+
+.namePhone {
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.namePhone input, .form_container input {
+    background: #C4C4C4;
+    border-radius: 10px;
+    height: 60px; 
+    font-size: 1rem;
+    border-style: none;
+    padding-left: 15px;
+}
+
+.namePhone input::placeholder, .form_container input::placeholder{
+    color: #303030;
+    opacity: 0.5;
+}
+
+.namePhone :nth-child(1){
+    width: 50%;
+    margin-right: 1.2rem;
+
+}
+.namePhone :nth-child(2){
+    width: 50%;
+}
+
+.form_container input{
+    display:block;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.wrapper{
+    margin-bottom: 50px;
+}
+
+.textareaMessage{
+    background: #C4C4C4;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 200px; 
+    font-size: 1rem;
+    border-style: none;
+    text-align: left;
+    /* opacity: 0.5; */
+    color: #303030;
+    padding: 15px 0 0 15px;
+
+}
+
+.textareaMessage::placeholder{
+    font-size: 1rem;
+   
+}
+
+.button{
+    width: 100%;
+    background: #5F2264;
+    border-radius: 5px;
+    height: 60px;
+    color: #F1F1F1;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 100px;
+}
+
+.button:hover{
+    background: #411146;
+}
+
+.reply {
+    font-size: 1rem;
+    text-align: center;
+    color: #36a936;
+    padding: 15px
+  }
+
+  
+
+@media screen and (max-width: 550px){
+
+.top{
+    grid-template-columns: 1fr;
+    
+}
+
+.topText {
+    padding: 1rem;
+    align-items: center;
+
+}
+
+.topText p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.container {
+    padding: 1rem;
+    width: 100%
+}
+
+.middleHeader > h2{
+    font-size: 1.5rem;
+}
+
+.middleHeader > p {
+    font-size: 0.8rem;
+}
+.namePhone {
+    flex-direction: column;
+   
+}
+
+.namePhone input:nth-child(n), .form_container input, .textareaMessage::placeholder, .button {
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.helpLine{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+    padding: 1rem 0;
+
+}
+
+.helpLine h3{
+    font-size: 1rem;
+   
+}
+
+
+.content > p{
+    font-size: 0.7em;
+    
+}
+
+
+
+}
