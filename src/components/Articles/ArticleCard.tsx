@@ -1,5 +1,5 @@
 import { FaCalendarMinus, FaArrowRight } from "react-icons/fa";
-import articleStyle from "./Article.module.css";
+import cardStyle from "./ArticleCard.module.css";
 type PropsType = {
   //   [key: string]: any;
   data: {
@@ -21,22 +21,23 @@ const ArticleCard: React.FC<PropsType> = ({
 
   return (
     <>
-      <div className={articleStyle.card}>
-        <div className={articleStyle.card_img}>
+      <div className={cardStyle.card}>
+        <div className={cardStyle.card_img}>
           <img src={imgUrl} alt="logo" />
         </div>
-        <div className={articleStyle.card_content}>
-          <button className={articleStyle.card_button}>{category}</button>
-          <div className={articleStyle.card_text}>{details}</div>
+        <div className={cardStyle.card_content}>
+          <button className={cardStyle.card_button}>{category}</button>
+          <div className={cardStyle.card_text}>{details}</div>
         </div>
-        <div className={articleStyle.card_base}>
-          <span className={articleStyle.left_base}>
-            <FaCalendarMinus className={articleStyle.base_icon} />
-          </span>
+        <div className={cardStyle.card_base}>
+          <div className={cardStyle.left_base}>
+            <FaCalendarMinus className={cardStyle.base_icon} />
+          </div>
           {date}
-          <span className={articleStyle.right_base}>
-            Read more <FaArrowRight className={articleStyle.base_icon} />
-          </span>
+          <div className={cardStyle.right_base}>
+            Read more{" "}
+            <FaArrowRight color="#fff" className={cardStyle.base_icon} />
+          </div>
         </div>
       </div>
     </>
