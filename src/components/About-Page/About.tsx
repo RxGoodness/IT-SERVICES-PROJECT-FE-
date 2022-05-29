@@ -59,15 +59,59 @@ function About() {
             without relying on meaningful content. Lor
             </p>
         </div>
-        <div our-achievements>
+        <div>
             <p className="achievements">Our Achievements</p>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <ul className="stars">
+              <li className="star-1"></li>
+              <li className="star-2"></li>
+              <li className="star-3"></li>
+            </ul>
+            <main className="msg-block">
+              <div className="msg block-1">
+                <p className="ellipse-1"></p>
+                <p className="line-1"></p>
+                <p>
+                  Developed Over 100 websites for brands in Africa, North America, 
+                  Europe and Asia
+                </p>
+              </div>
+              <div className="msg block-2">
+                <p className="ellipse-2"></p>
+                <p className="line-2"></p>
+                <p>
+                  Developed Over 100 websites for brands in Africa, 
+                  North America, Europe and Asia
+                </p>
+              </div>
+              <div className="msg block-3">
+                <p className="ellipse-3"></p>
+                <p className="line-3"></p>
+                <p>
+                  Agile project management for multinational companies 
+                  in Nigeria and Canada
+                </p>
+              </div>
+              <div className="msg block-4">
+                <p className="ellipse-4"></p>
+                <p>
+                  Agile project management for multinational companies 
+                  in Nigeria and Canada
+                </p>
+              </div>
+              <div className="msg block-5">
+                <p className="ellipse-5"></p>
+                <p>
+                  Top 10 Modern Website Builders
+                </p>
+              </div> 
+              <div className="msg block-6">
+                <p className="ellipse-6"></p>
+                <p>
+                  Top 10 Modern Website Builders
+                </p>
+              </div>  
+            </main>
+            
 
         </div>
          
