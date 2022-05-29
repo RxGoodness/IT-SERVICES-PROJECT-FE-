@@ -3,6 +3,7 @@ import style from './Footer.module.css'
 import faIcon from '../../assets/images/footer/fb.png'
 import twIcon from '../../assets/images/footer/twitter.png'
 import insta from '../../assets/images/footer/instagram.png'
+import {Link} from 'react-router-dom'
 
 function Footer() {
   return (
@@ -86,7 +87,7 @@ function Footer() {
                       <p>About us</p>
                       <p>Careers</p> 
                       <p>Case Study</p>
-                      <p>Contact us</p>  
+                      <Link to="/contact" className={style.link}><p>Contact Us</p></Link> 
                       <p>Partners</p>
                       <p>Blog</p> 
                   </div>
@@ -97,7 +98,8 @@ function Footer() {
                       <p>Home</p> 
                       <p>Services</p>
                       <p>Packages</p>  
-                      <p>Contact</p>
+                      <Link to="/contact" className={style.link}><p>Contact</p></Link>
+                      
                   </div>
 
                 </div>
