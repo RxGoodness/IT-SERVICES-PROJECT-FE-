@@ -1,10 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Navigation from './Navigations/Navigation';
+import Adminlogin from './pages/AdminLogin/AdminLogin';
+import Pagespage from './pages/Pagespage/Pages-page';
 
 function App() {
+  const [credentials, setCredentials] = useState({
+    email: "",
+    password: "",
+    messageText: "",
+    alert: false,
+    styleType: "",
+  });
   return (
-    <Navigation />
+    <>
+    {/* <Adminlogin email={''} password={''}  /> */}
+    <Pagespage />
+    </>
+   
+
   );
 }
 
