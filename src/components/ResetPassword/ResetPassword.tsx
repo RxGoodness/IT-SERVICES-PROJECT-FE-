@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 import axios from 'axios';
 
+
 function ResetPassword() {
 
     const navigate = useNavigate();
@@ -23,7 +24,6 @@ function ResetPassword() {
         setReEnterPassword(newpass);
     }
 
-
     const handleSubmit = (e: SyntheticEvent) => {
         e.preventDefault();
 
@@ -31,7 +31,7 @@ function ResetPassword() {
             throw Error('Password Mismatch')
         }
 
-        const baseUrl = 'http://localhost:4000/reset-password';
+        const baseUrl = 'https://appoga.herokuapp.com/reset-password';
 
         const data = {
             password,

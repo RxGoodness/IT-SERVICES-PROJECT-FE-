@@ -13,8 +13,8 @@ function Content() {
       const [email, setEmail] = useState('');
 
       const changeEmail = (e: ChangeEvent<HTMLInputElement>) => {
-        const email = e.target.value;
-        setEmail(email);
+        const emailVal = e.target.value;
+        setEmail(emailVal);
       }
 
       const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
