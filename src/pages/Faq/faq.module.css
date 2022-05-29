@@ -191,6 +191,12 @@ input::placeholder {
     border: none;
     background: var(--color-accent);
     color: #fff;
+    margin-bottom: 5rem;
+
+}
+input::placeholder {
+    
+   padding-left: 1rem;
 }
 
 /* Desktop size for third part */

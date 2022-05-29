@@ -5,31 +5,20 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins' sans-serif;
-}
-
-.ContactUsBody{
-    margin: 0;
-    box-sizing: border-box;
     font-style: normal;
 }
 
 
-
-
-
 .top{
     width: 100%;
-    height: 960px;
+    height: 80vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    flex-direction: row;
-    width: 100%;
     z-index: -1;
     
 }
 
 .topText{
-   
     display: flex;
     justify-content: center;
     background: #5F2264;
@@ -42,15 +31,15 @@
 
 .topText p{
     font-weight: 700;
-    font-size: 80px;
+    font-size: 2.5rem;
     line-height: 100px;
     color: #F1F1F1;
    
     
 }
 
-.topImg{
-    background-image: url("../../assets/images/contactUs/contact.jpeg");
+.topImg > img{
+    /* background-image: url("../../assets/images/contactUs/contact.jpeg"); */
     background-position: center;
     background-size: cover;
     object-fit: cover;
@@ -65,17 +54,17 @@
     position: absolute;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     gap: 24px;
-    top: 798px;
+    top: 75%;
     left: 0;
     right: 0;
    
 }
 
 .helpLine h3{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-bottom: 15px;
 }
 
@@ -84,7 +73,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 564px;
+    height: 464px;
     width: 100%;
     background: #5F2264;
     color: #F1F1F1;
@@ -94,35 +83,30 @@
     
 }
 
-
-.flagNGN{
-  background: url("../../assets/images/contactUs/Nigeriaflag.png");
-  background-size: cover;
-  height: 150px;
-  width: 300px;
-  margin-bottom: 50px;
-    
-
+.flagNGN, .flagCAD{
+    width: 60%;
 }
 
-.flagCAD{
-    background: url("../../assets/images/contactUs/Canadaflag.png");
-    background-size: cover;
-    height: 150px;
-    width: 300px;
-    margin-bottom: 50px;
-  }
+.flagNGN > img,.flagCAD > img{
+  background-size: cover;
+  height: 150px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
 
 .content{
     display: flex;
-    align-items: center;  
+    align-items: center; 
+    padding: 0 40px;
 }
 
 .content > img{
     margin: 15px;
+    height: 20px
 } 
 .content > p{
-    font-size: 1.2em;
+    font-size: 0.9em;
     padding-left: 15px;
 }
 
@@ -137,9 +121,9 @@
 
 .container{
    
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
-    padding-top: 546px;
+    padding-top: 446px;
     
    
 }
@@ -156,22 +140,23 @@
 
 .middleHeader > h2 {
     font-weight: 700;
-    font-size: 50px;
+    font-size: 2rem;
     line-height: 75px;
     color: #303030;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .middleHeader > p {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1rem;
     line-height: 36px;
     color: #303030;
-    margin: 50px;
+    margin: 1rem;
 
 }
 
 .form_container{
     width: 100%;
+    padding-bottom: 50px
     
 }
 
@@ -184,8 +169,8 @@
 .namePhone input, .form_container input {
     background: #C4C4C4;
     border-radius: 10px;
-    height: 90px; 
-    font-size: 24px;
+    height: 60px; 
+    font-size: 1rem;
     border-style: none;
     padding-left: 15px;
 }
@@ -197,7 +182,7 @@
 
 .namePhone :nth-child(1){
     width: 50%;
-    margin-right: 96px;
+    margin-right: 1.2rem;
 
 }
 .namePhone :nth-child(2){
@@ -219,7 +204,7 @@
     border-radius: 10px;
     width: 100%;
     min-height: 200px; 
-    font-size: 24px;
+    font-size: 1rem;
     border-style: none;
     text-align: left;
     /* opacity: 0.5; */
@@ -229,7 +214,7 @@
 }
 
 .textareaMessage::placeholder{
-    font-size: 24px;
+    font-size: 1rem;
    
 }
 
@@ -237,12 +222,12 @@
     width: 100%;
     background: #5F2264;
     border-radius: 5px;
-    height: 100px;
+    height: 60px;
     color: #F1F1F1;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: 400;
+    font-size: 1rem;
     margin-bottom: 100px;
 }
 
@@ -251,10 +236,74 @@
 }
 
 .reply {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     color: #36a936;
     padding: 15px
   }
 
   
+
+@media screen and (max-width: 550px){
+
+.top{
+    grid-template-columns: 1fr;
+    
+}
+
+.topText {
+    padding: 1rem;
+    align-items: center;
+
+}
+
+.topText p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.container {
+    padding: 1rem;
+    width: 100%
+}
+
+.middleHeader > h2{
+    font-size: 1.5rem;
+}
+
+.middleHeader > p {
+    font-size: 0.8rem;
+}
+.namePhone {
+    flex-direction: column;
+   
+}
+
+.namePhone input:nth-child(n), .form_container input, .textareaMessage::placeholder, .button {
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.helpLine{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+    padding: 1rem 0;
+
+}
+
+.helpLine h3{
+    font-size: 1rem;
+   
+}
+
+
+.content > p{
+    font-size: 0.7em;
+    
+}
+
+
+
+}

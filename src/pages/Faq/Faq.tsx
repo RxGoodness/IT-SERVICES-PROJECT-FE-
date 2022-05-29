@@ -16,13 +16,16 @@ const Faqs = () => {
       <Accordion data={"data"} />
 
       <h3 className={faqCss.anotherQuestionHeader}>Still have A question?</h3>
-      <div className={faqCss.anotherQuestion}>
+      <div>
+        <form className={faqCss.anotherQuestion}>
         <input
           type="text"
           className={faqCss.questionInput}
           placeholder="Type your question"
         />
         <input type="button" value="send" className={faqCss.questionButton} />
+        </form>
+       
       </div>
     </>
   );
