@@ -1,0 +1,17 @@
+
+
+.btn {
+    background-color:#A987AC;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+    height: 49px;
+    margin-right: 7rem;
+    margin-top: 5rem;
+    align-self: center;
+  }
+
+  .btn:hover{
+    background-color:#59155f;  
+}

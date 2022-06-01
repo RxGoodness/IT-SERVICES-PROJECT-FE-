@@ -1,7 +1,14 @@
+
+
+.header{
+    position:fixed;
+    width: 100%;
+    z-index: 1;
+}
 .headWrapper{
     display:flex;
     justify-content:space-between;
-    width: 1440px;
+ width:100vw;
     height: 70px;
     left: 0px;
     top: 0px;
