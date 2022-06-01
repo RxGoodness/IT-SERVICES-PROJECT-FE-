@@ -1,0 +1,20 @@
+label {
+  font-family: Inter;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 24px;
+  line-height: 124%;
+  padding-left: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+ background-color:#8360801A;
+  height: 53px;
+ border: 1px solid #8360801A;
+  border-radius:0.3rem;
+  /* color: #FEFDFE */
+}

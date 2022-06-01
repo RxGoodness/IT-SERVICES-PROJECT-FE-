@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
+    <aside className = {styles.sideBar_container}>
     <div className={styles.sidebar}>
       <div className={styles.topbar}>
         <ul>
@@ -37,6 +38,7 @@ const Sidebar = () => {
       </div>
       
     </div>
+    </aside>
   );
 };
 
