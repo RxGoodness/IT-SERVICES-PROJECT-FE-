@@ -11,11 +11,10 @@ function App() {
     <Router>
         <Routes>
           <Route path="/forget-password" element={<ForgetPassword />} />
-          <Route path="/reset-password/" element={<ResetPassword />} />
+          <Route path="/reset-password/:userId/:token" element={<ResetPassword />} />
           <Route path="/about" element={<About />} />
         </Routes>
     </Router>
-      // <Route path="/reset-password/:userId/:token" element={<ResetPassword />} />
   );
 }
 

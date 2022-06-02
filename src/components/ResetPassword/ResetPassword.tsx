@@ -15,8 +15,8 @@ function ResetPassword() {
 
 
     const handleOldPass = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const pass = e.target.value;
-        setPassword(pass);
+        const oldpass = e.target.value;
+        setPassword(oldpass);
     }
 
     const handleNewPass = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,7 +31,7 @@ function ResetPassword() {
             throw Error('Password Mismatch')
         }
 
-        const baseUrl = 'https://appoga.herokuapp.com/reset-password';
+        const baseUrl = 'http://localhost:4000/reset-password';
 
         const data = {
             password,
@@ -67,17 +67,18 @@ function ResetPassword() {
                 </div>
 
                  <form onSubmit={handleSubmit}>
+
                      <div>
                          <p>Reset Password</p>
                      </div>
    
                      <div>
                        <p>
-                           <label htmlFor='password1'>Enter New Password</label>
+                           <label htmlFor='password'>Enter New Password</label>
                        </p>
                        <input 
                            type="password" 
-                           id='password1' 
+                           id='password' 
                            onChange={handleOldPass}
                            value={password}
                        />
@@ -85,11 +86,11 @@ function ResetPassword() {
    
                      <div>
                        <p>
-                         <label htmlFor='password2'>Confirm New Password</label>
+                         <label htmlFor='reEnterPassword'>Confirm New Password</label>
                        </p>
                        <input
                        type="password" 
-                       id='password2' 
+                       id='reEnterPassword' 
                        onChange={handleNewPass}
                        value={reEnterPassword}
                        />
