@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-import React from 'react'
-
-const AboutUs = () => {
-  return (
-    <div>AboutUs</div>
-  )
-}
-
-export default AboutUs
-=======
 import Styles from './About.module.css';
-import { Images } from './AboutUs.Images';
+import { Images } from './About.Images';
 
 
-const AboutUs = () => {
-  
+function About() {
   return (
     <div className={Styles.container}>
       <div className={Styles.header}>
@@ -310,5 +298,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs;
->>>>>>> forget-password
+export default About;
