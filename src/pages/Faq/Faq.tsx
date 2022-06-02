@@ -10,7 +10,7 @@ const Faqs = () => {
     console.log(question);
   };
   return (
-    <>
+    <section className = {faqCss.main_container}>
       <div className={faqCss.faqContainer}>
         <div className={faqCss.purpleBg}>Got a Question?</div>
         <img className={faqCss.faqImage} src={image} alt="" />
@@ -35,7 +35,7 @@ const Faqs = () => {
           <input type="submit" value="send" className={faqCss.questionButton} />
         </form>
       </div>
-    </>
+    </section>
   );
 };
 

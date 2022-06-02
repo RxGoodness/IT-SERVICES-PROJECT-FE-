@@ -94,10 +94,18 @@ h3 {
     text-align: center;
 }
 
+
+
+.main_container{
+    /* display: flex; */
+   padding-left: 100px;
+
+}
 /* top part */
 .faqContainer {
     display: flex;
     flex-direction: column;
+    
 }
 
 .purpleBg {

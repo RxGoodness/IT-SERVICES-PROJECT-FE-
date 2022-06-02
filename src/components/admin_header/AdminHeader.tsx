@@ -8,7 +8,7 @@ import {GrProductHunt} from "react-icons/gr"
 
 const Adminheader = () => {
     return (
-        
+        <nav className = {styles.header}>
         <div className={styles.headWrapper}>
             <div className={styles.logo}>
                 <img src="https://decagonhq.com/wp-content/uploads/2021/12/logo-white.svg" alt="logo"/>
@@ -29,7 +29,7 @@ const Adminheader = () => {
                
             </div>
         </div>
-
+        </nav>
 
         
     )
