@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* :root {
+    --clr-light: #E5E5E5;
+}
+body {
+    font-family: Inter;
+    background-color: var(--clr-light)
+} */
+
+.page--container {  
+    flex-basis: 225px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    padding-bottom: 20px;
+    background-color: white;
+    /* width: 0 auto; */
+    width: 400px;
+}
+
+

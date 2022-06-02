@@ -1,0 +1,151 @@
+:root {
+    --color-accent: #5F2264;
+    --color-answered: #C4C4C4;
+  }
+
+
+/* Main-container */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+/* First part */
+
+
+h4 {
+    margin-top: 6rem;
+    width: 10rem;
+    margin-bottom: 1rem;
+    
+}
+
+.jobTitleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.jobDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.jobType, .jobLocation {
+padding: 1rem;
+padding-bottom: 3rem;
+display: flex;
+background: var(--color-accent);
+height: 2rem;
+width: 232px;
+color: #fff;
+border-radius: 2rem;
+margin-bottom: 1rem;
+margin-top: 1rem;
+}
+.jobType, .jobLocation img {
+    height: 2rem;
+    padding-left: 2rem;
+    
+ 
+}
+.imgStyle {
+   margin-right: 1rem;
+
+} 
+
+.submitButton {
+    width: 100%;
+    height: 2rem;
+    background: var(--color-accent);
+    color: #fff;
+    border-radius: 1rem; 
+    padding: 1rem;
+    padding-bottom: 2.5rem;
+    border: none;
+    margin-bottom: 10rem;
+}
+
+
+/* Desktop design for first part */
+@media screen and (min-width: 1024px) {
+    .jobTitleContainer {
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .jobDescription p {
+        width: 12rem;
+    }
+   .jobImage {
+       width: 300px;
+       height: 300px; 
+       margin-right: 5rem;
+   }
+   
+}
+
+
+
+/* Second part */
+.bioFata, .contactDetails, .qualification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputField {
+    width: 20rem;
+    margin-bottom: 2rem;
+    height: 2rem;
+    background: var(--color-answered);
+    border: none;
+    border-radius: 6px;
+}
+.formDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.vanish {
+    visibility: hidden
+}
+
+/* Destop size for the second part */
+@media screen and (min-width: 1024px) {
+    
+.bioData, .contactDetails, .qualification {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.inputField {
+    width: 45%;
+    margin-left: 2rem;
+    height: 4rem;
+}
+
+h4 {
+    margin-top: 6rem;
+    margin-left: 3rem;
+    width: 10rem;
+    margin-bottom: 1rem;
+    
+}
+.submitButton {
+    width: 30%;
+    margin-left: 18rem;
+    padding-top: 1rem;
+    margin-bottom: 5rem;
+   
+   
+}
+
+}

@@ -1,31 +1,39 @@
-import React from "react";
+import React, { useState, FormEvent } from "react";
 import Accordion from "../../components/Accordion/Accordion";
 import image from "../../assets/images/Faqs/contact-illustration1.jpg";
 import faqCss from "./faq.module.css";
 const Faqs = () => {
+  const [question, setQuestion] = useState("");
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(question);
+  };
   return (
     <>
       <div className={faqCss.faqContainer}>
         <div className={faqCss.purpleBg}>Got a Question?</div>
         <img className={faqCss.faqImage} src={image} alt="" />
       </div>
-      <h3 className={faqCss.frequentlyAskedQuestions}>Frequently asked questions</h3>
+      <h3 className={faqCss.frequentlyAskedQuestions}>
+        Frequently asked questions
+      </h3>
       <Accordion data={"data"} />
       <Accordion data={"data"} />
       <Accordion data={"data"} />
       <Accordion data={"data"} />
 
       <h3 className={faqCss.anotherQuestionHeader}>Still have A question?</h3>
-      <div>
-        <form className={faqCss.anotherQuestion}>
-        <input
-          type="text"
-          className={faqCss.questionInput}
-          placeholder="Type your question"
-        />
-        <input type="button" value="send" className={faqCss.questionButton} />
+      <div className={faqCss.formDiv}>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Type your question"
+            className={faqCss.questionInput}
+            onChange={(e) => setQuestion(e.target.value)}
+          />
+          <input type="submit" value="send" className={faqCss.questionButton} />
         </form>
-       
       </div>
     </>
   );
