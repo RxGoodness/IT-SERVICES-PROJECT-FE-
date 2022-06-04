@@ -1,0 +1,38 @@
+.single_career {
+    background-color: #707070;
+    border-radius: var(--radius-4);
+    padding: 20px 10px;
+}
+
+.single_career .top {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    color: white;
+    text-align: center;
+}
+
+.single_career .content h3 {
+    color: white;
+}
+
+.single_career .content p {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    padding-bottom: 40px;
+}
+
+.single_career .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.single_career .bottom a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

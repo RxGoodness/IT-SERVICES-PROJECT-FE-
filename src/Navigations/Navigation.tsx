@@ -1,6 +1,8 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Admin from "./Admin";
 import Clients from "./Clients";
+import AdminLogin from "../pages/AdminLogin/AdminLogin"
+import Pagespage from "../pages/Pagespage/Pages-page";
 
 const Navigation = () => {
   return (
