@@ -4,7 +4,7 @@ import image from "../../assets/images/Faqs/contact-illustration1.jpg";
 import faqCss from "./faq.module.css";
 const Faqs = () => {
   return (
-    <>
+    <section className = {faqCss.main_container}>
       <div className={faqCss.faqContainer}>
         <div className={faqCss.purpleBg}>Got a Question?</div>
         <img className={faqCss.faqImage} src={image} alt="" />
@@ -24,7 +24,7 @@ const Faqs = () => {
         />
         <input type="button" value="send" className={faqCss.questionButton} />
       </div>
-    </>
+    </section>
   );
 };
 

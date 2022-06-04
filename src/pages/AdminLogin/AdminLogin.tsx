@@ -43,7 +43,7 @@ const Adminlogin = (props: Login) => {
      </div>
     
     <div className={adminCss.formDesign}>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={adminCss.form}>
       <label htmlFor="email" className={adminCss.inputLabel}>
         Email
       </label>
