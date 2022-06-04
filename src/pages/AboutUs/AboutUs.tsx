@@ -1,4 +1,4 @@
-import Styles from './About.module.css';
+import Styles from './AboutUs.module.css';
 import { Images } from './AboutUs.Images';
 
 
