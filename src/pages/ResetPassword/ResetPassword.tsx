@@ -1,5 +1,5 @@
 import Styles from './ResetPassword.module.css';
-import { ChangeEvent, FocusEvent, SyntheticEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, FormEvent, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -49,7 +49,7 @@ const ResetPassword = () => {
     }
 
 
-    const handleSubmit = (e: SyntheticEvent) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
 
