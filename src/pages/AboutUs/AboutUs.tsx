@@ -6,7 +6,7 @@ const AboutUs = () => {
   
   return (
     <div className={Styles.container}>
-      <div className={Styles.header}>
+      {/* <div className={Styles.header}>
           <p className={Styles.appogaLogo}></p>
           <ul className={Styles.ul}>
             <li className={Styles.home}>Home</li>
@@ -16,7 +16,7 @@ const AboutUs = () => {
             <li className={Styles.packages}>Packages</li>
             <li className={Styles.resources}>Resources</li>
           </ul>
-      </div>
+      </div> */}
       <section>
         <div className={Styles.about_appoga}>
             <h3>About <span className={Styles.appoga_special}>Appoga</span></h3>
@@ -189,7 +189,7 @@ const AboutUs = () => {
 
       </section>
 
-      <footer className={Styles.footer}>
+      {/* <footer className={Styles.footer}>
 
           <div className={Styles.social_media_icon}>
             <img src={Images.Facebook} alt="facebook" />
@@ -293,7 +293,7 @@ const AboutUs = () => {
             by appoga.com 
             </p>
           </div>
-      </footer>
+      </footer> */}
 
     </div>
   )
