@@ -1,0 +1,12 @@
+.content {
+  width: 20%;
+}
+
+.dashboard_container {
+  display: flex;
+  width: 100vw;
+}
+
+.content_container {
+  width: 100%;
+}
