@@ -23,7 +23,7 @@ const Content = () => {
         try {
           const body = { email };
           !body.email && NotificationManager.error('Email is required!');
-          await axios.post('https://appoga.herokuapp.com/reset-password/enter-email', body);
+          await axios.post('http//localhost:4000/reset-password/enter-email', body);
           NotificationManager.success('Password Reset link sent to your email. Link will be valid for 15 min');
           
         } catch (error: any) {
@@ -58,7 +58,7 @@ const Content = () => {
                     onChange={changeEmail}
           
                     />
-                    <p className={Styles.back_to_login}><Link to="/login">Back To Login</Link></p>
+                    <p className={Styles.back_to_login}><Link to="/admin">Back To Login</Link></p>
                   </div>
                   <button className={Styles.submit_button_field} type="submit"><span className={Styles.send_text}>Send</span></button>
               </form>
