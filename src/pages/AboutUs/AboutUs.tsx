@@ -6,7 +6,17 @@ const AboutUs = () => {
   
   return (
     <div className={Styles.container}>
-      
+      <div className={Styles.header}>
+          <p className={Styles.appogaLogo}></p>
+          <ul className={Styles.ul}>
+            <li className={Styles.home}>Home</li>
+            <li className={Styles.company}>Company</li>
+            <li className={Styles.services}>Services</li>
+            <li className={Styles.products}>Products</li>
+            <li className={Styles.packages}>Packages</li>
+            <li className={Styles.resources}>Resources</li>
+          </ul>
+      </div>
       <section>
         <div className={Styles.about_appoga}>
             <h3>About <span className={Styles.appoga_special}>Appoga</span></h3>
@@ -178,6 +188,112 @@ const AboutUs = () => {
         </div>
 
       </section>
+
+      <footer className={Styles.footer}>
+
+          <div className={Styles.social_media_icon}>
+            <img src={Images.Facebook} alt="facebook" />
+            <img src={Images.Twitter} alt="twitter" />
+            <img src={Images.Instagram} alt="instagram" />
+          </div>
+
+          <div className={Styles.services_tab}>
+              <div className={Styles.footer_service}>
+                <h3>Services</h3>
+                <p>Web Development</p>
+                <p>Mobile App Development</p>
+                <p>Product Design (UI/UX)</p>
+                <p>Agile Project Management</p>
+                <p>Branding Services</p>
+                <p>Software Development</p>
+                <p>Product Testing</p>
+                <p>Data Analysis & Research</p>
+                <p>Telecommunication & VAS</p>
+                <p>Digital Marketing</p>
+                <p>IT Outsourcing & Support</p>
+                <p>Training</p>
+                <p>Blockchain Development</p>
+              </div>
+              <div className={Styles.footer_saas}>
+                <h3>SaaS Solutions</h3>
+                <p>Custom Portal</p>
+                <p>School Management System</p>
+                <p>ERP System</p>
+                <p>Online Dating System</p>
+                <p>Web Hosting Portal</p>
+                <p>Bulk SMS Portal</p>
+              </div>
+              <div className={Styles.footer_product}>
+                <h3>Products</h3>
+                <p>Laundry App</p>
+                <p>Logistic App</p>
+                <p>Product</p>
+                <p>Product</p>
+                <p>Product</p>
+              </div>
+              <div className={Styles.footer_business}>
+                <h3>For Business</h3>
+                <p>Product for Business</p>
+                <p>Product for Business</p>
+                <p>Product for Business</p>
+                <p>Product for Business</p>
+                <p>Product for Business</p>
+              </div>
+              <div className={Styles.footer_startup}>
+                <h3>For Startup</h3>
+                <p>Service for Startup</p>
+                <p>Service for Startup</p>
+                <p>Service for Startup</p>
+                <p>Service for Startup</p>
+                <p>Service for Startup</p>
+              </div>
+              <div className={Styles.footer_institution}>
+                <h3>For Institutions</h3>
+                <p>Product for Healthcare</p>
+                <p>Product for Education</p>
+                <p>Prodcut for Media</p>
+                <p>Product for Sports</p>
+                <p>Product for Finance</p>
+                <p>Product for </p>
+              </div>
+              <div className={Styles.footer_company}>
+                <h3>Company</h3>
+                <p>About us</p>
+                <p>Careers</p>
+                <p>Case Study</p>
+                <p>Contact us</p>
+                <p>Partners</p>
+                <p>Blog</p>
+              </div>
+              <div className={Styles.footer_sitemap}>
+                <h3>Site Map</h3>
+                <p>Home</p>
+                <p>Company</p>
+                <p>Services</p>
+                <p>Packages</p>
+                <p>Contact</p>
+              </div>
+              <div className={Styles.footer_tohide}>
+                <h3>To Hide</h3>
+                <p>Home</p>
+                <p>Company</p>
+                <p>Services</p>
+                <p>Packages</p>
+                <p>Contact</p>
+              </div>
+          </div>
+
+          <div className={Styles.footer_end}>
+            <p>
+             &copy; APPOGA TECHNOLOGIES LTD. All rights reserved. 2021. 
+            Scrapabill Ltd is the joint venture partner and 
+            exclusive corporate sponsor of Appoga Technologies 
+            Limited and its brands. Contact Scrapabill for any legal 
+            issures related to the services. Site designed and managed 
+            by appoga.com 
+            </p>
+          </div>
+      </footer>
 
     </div>
   )
