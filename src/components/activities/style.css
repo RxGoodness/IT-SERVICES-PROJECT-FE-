@@ -1,0 +1,36 @@
+.expandCon {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.textActivity {
+    /* text-align: center; */
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 205px;
+  
+  }
+  
+
+  @media screen and (max-width: 550px){
+    .expandCon {
+        width: 80%;
+        display: grid;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: auto;
+    }
+
+    .textActivity{
+        margin: auto;
+    }
+
+    h3{
+        font-size: 0.7rem;
+    }
+  }
+  

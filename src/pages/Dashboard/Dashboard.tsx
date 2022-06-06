@@ -6,9 +6,9 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import Overview from "../AdminOverview/AdminOverview";
 import Blog from "../Blog/Blog";
 import Faq from "../Faq/Faq";
-import Pages from "../AdminPages/Pages";
-import { CaseStudy } from "../caseStudy/CaseStudy";
-import { CreateBlog } from "../createBlog/CreateBlog";
+// import Pages from "../AdminPages/Pages";
+// import { CaseStudy } from "../caseStudy/CaseStudy";
+// import { CreateBlog } from "../createBlog/CreateBlog";
 
 const Dashboard = () => {
   return (
@@ -18,6 +18,20 @@ const Dashboard = () => {
         <div className={styles.content}>
           <Sidebar />
         </div>
+        <div>
+        <Routes>
+          <Route  path="/" element={<Overview />}/>
+          {/* <Route path="/pages" element={<Pagespage />} /> */}
+          <Route path="/blog" element={<Blog />} />
+          {/* <Route path="/faqs" element={<AdminFaq />}/> */}
+          <Route path="/accountsettings" element={<Faq />}/>
+        {/* <Route  exact path="/" element={<Blog />}> */}
+          {/* { <Route index element={<Overview />} /> } */}
+          
+          {/* <Route path="/admin/accountsettings" element={<AccountSettings />} /> */}
+          {/* <Route path="/admin/preview" element={<Preview />} /> */}
+        {/* /</Route> */}
+      </Routes>
         <div className = {styles.content_container}>
           {/* <Routes>
             <Route path="/" element={<Overview />} />
@@ -33,6 +47,7 @@ const Dashboard = () => {
           <Outlet/>
         </div>
       </div>
+    </div>
     </div>
   );
 };

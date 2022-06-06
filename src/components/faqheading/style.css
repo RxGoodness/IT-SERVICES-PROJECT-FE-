@@ -1,0 +1,22 @@
+.faqs-section-wrapper {
+    position: relative;
+}
+
+.questionsCon {
+    height: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-button {
+    background-color: #7e4e82;
+    color: #ffffff;
+    padding: 20px;
+    position: fixed;
+    bottom: 100px;
+    right: 180px;
+    font-size: 1rem;
+    border-radius: 50px;
+}
