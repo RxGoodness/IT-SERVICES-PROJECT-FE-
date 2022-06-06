@@ -6,12 +6,7 @@ function App() {
 
   return (
     <Navigation />
-<<<<<<< HEAD
-    </>
-    
-=======
   
->>>>>>> main
   );
 }
 
