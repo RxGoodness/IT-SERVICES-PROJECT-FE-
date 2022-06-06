@@ -7,7 +7,6 @@ import Login from '../pages/Login/Login'
 import Overview from '../pages/Overview/Overview'
 import Register from '../pages/Register/Register'
 import ForgetPassword from '../pages/ForgetPassword/ForgetPassword'
-import ResetPassword from '../pages/ResetPassword/ResetPassword'
 import AdminOverview from "../pages/AdminOverview/AdminOverview";
 import Blog from "../pages/Blog/Blog";
 import Faq from "../pages/Faq/Faq";
@@ -22,7 +21,6 @@ const Admin = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/dashboard*" element={<Dashboard />} />
       <Route path="/forget-password" element={<ForgetPassword />} />
-      <Route path="/reset-password/:userId/:token" element={<ResetPassword />} />
       <Route path="/overview" element={<Overview />} />
       <Route path="/adminFaq" element={<AdminFaq />} />
       <Route path="/dashboard*" element={<Dashboard />} />

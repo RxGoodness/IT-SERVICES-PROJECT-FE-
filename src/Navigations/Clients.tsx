@@ -17,6 +17,7 @@ import Partner from '../pages/Partner/Partner'
 import ProjectDetails from '../pages/ProjectDetails/ProjectDetails'
 import Projects from '../pages/Projects/Projects'
 import Services from '../pages/Services/Services'
+import ResetPassword from '../pages/ResetPassword/ResetPassword'
 import Footer from '../components/footer/Footer'
 
 
@@ -41,6 +42,7 @@ const Clients = () => {
         <Route path="/partner" element={<Partner />} />
         <Route path="/partner" element={<JoinUs />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/reset-password/:userId/:token" element={<ResetPassword />} />
       </Routes>
     <Footer />
     </div>

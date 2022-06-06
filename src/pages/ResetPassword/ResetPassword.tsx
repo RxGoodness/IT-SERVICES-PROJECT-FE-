@@ -1,5 +1,5 @@
 import Styles from './ResetPassword.module.css';
-import { ChangeEvent, FocusEvent, SyntheticEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, FormEvent, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -21,6 +21,7 @@ const ResetPassword = () => {
     const [focusedPassword, setFocusedPassword] = useState(false);
     const [focusedConPassword, setFocusedConPassword] = useState(false);
     const navigate = useNavigate();
+    
   
     const focusPasswordHandler = (e: FocusEvent<HTMLInputElement>) => {
         setFocusedPassword(true)
@@ -49,7 +50,7 @@ const ResetPassword = () => {
     }
 
 
-    const handleSubmit = (e: SyntheticEvent) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
 
