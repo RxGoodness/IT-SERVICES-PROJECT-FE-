@@ -1,0 +1,14 @@
+.hero {
+  height: 14rem;
+  background-color: #5f2264;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.hero_text {
+  text-align: center;
+  color: #ffffff;
+  font-size: 3rem;
+}

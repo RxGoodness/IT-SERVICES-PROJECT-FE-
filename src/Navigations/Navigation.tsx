@@ -10,8 +10,6 @@ const Navigation = () => {
       <Routes>
           <Route path="/*" element={<Clients />} />
           <Route path="/admin*" element={<Admin />} />
-          <Route path="/adminlogin" element={<AdminLogin email={""} password={""} />} />
-          <Route path="/allPages" element={<Pagespage />} />
       </Routes>
     </BrowserRouter>
     

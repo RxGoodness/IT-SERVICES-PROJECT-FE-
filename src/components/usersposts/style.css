@@ -1,0 +1,138 @@
+.frameDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto 2rem;
+  }
+  
+  .frame {
+    width: 100%;
+    height: 315px;
+    background: rgba(244, 234, 245, 0.1);
+    border: 1px solid rgba(131, 96, 128, 0.2);
+    backdrop-filter: blur(85px);
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  .postsItemDiv {
+    height: 157.5px;
+    width: 100%;
+    display: flex;
+  }
+  
+  .postItems {
+    height: 157.5px;
+    width: 100%;
+  }
+  
+  .icon-paraDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+  }
+  
+  .icons {
+    padding-right: 20px;
+    padding-bottom: 25px;
+  }
+  
+  .fourBtn {
+    width: 134px;
+    height: 34px;
+    background: #7e4e82;
+    border-radius: 17px;
+    border: solid 1px #7e4e82;
+    color: #ffffff;
+    /* text-align: center; */
+    
+  }
+  
+  .create {
+  
+    height: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+    padding-top: 40px;
+    padding-bottom: 1rem;
+  }
+  
+  .responses {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 32px;
+    color: rgba(126, 78, 130, 0.74);
+    padding: 10px;
+    text-align: left;
+  }
+  
+
+@media screen and (max-width: 550px){
+  .linksCon{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .welcome{
+    width: 100%;
+    padding-left: 1.5rem;
+  }
+  .btnDiv{
+   width: 100%;
+   justify-content: center;
+  }
+  .plus{
+    margin-left: 0;
+    padding: 10px;
+  }
+
+
+  .frameDiv{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+
+  }
+  .frame{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+
+  .postsItemDiv {
+   flex-direction: column;
+   height: 100%;
+    
+  }
+
+  .postItems {
+    height:fit-content;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  
+  .icon-paraDiv{
+      flex-direction: column;
+      padding-top: 2rem ;
+      padding-left: 0;
+
+    }
+
+    .create {
+      flex-direction: column;
+      
+      
+    }
+    .responses{
+      text-align: center;
+    }
+
+
+
+}

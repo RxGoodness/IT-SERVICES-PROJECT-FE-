@@ -1,0 +1,57 @@
+.expand {
+    padding: 20px 20px;
+    padding-bottom: 0;
+    width: 1029px;
+    background: #fefdfe;
+    border: 1px solid rgba(131, 96, 128, 0.2);
+    border-radius: 8px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    margin: 0;
+  }
+  
+  .h3 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+    border: none;
+    background-color: rgb(254, 253, 254);
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .bottom {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .author {
+    margin-left: 20px;
+  }
+  
+
+  @media screen and (max-width: 550px){
+   
+
+    .expand{
+       width: 100%; 
+    }
+  }
