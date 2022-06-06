@@ -65,7 +65,6 @@ function About() {
         <section className={Styles.ourAchievements}>
                 <div></div>
                 
-
         </section>
 
 
