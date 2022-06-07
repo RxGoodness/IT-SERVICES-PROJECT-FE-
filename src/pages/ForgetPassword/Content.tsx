@@ -24,7 +24,7 @@ const Content = () => {
           const body = { email };
           !body.email && NotificationManager.error('Email is required!');
           await axios.post('http://localhost:4000/reset-password/enter-email', body);
-          NotificationManager.success('Password Reset link sent to your email. Link will be valid for 15 min');
+          NotificationManager.success(`Password Reset link sent to ${email}. Link will be valid for 15 min`);
           
         } catch (error: any) {
           error.message ? NotificationManager.error(error.response.data.msg) : NotificationManager.error("Something Went Wrong");
