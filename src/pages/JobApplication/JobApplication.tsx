@@ -50,7 +50,7 @@ const JobApplication = () => {
       toast.success("Application sucessful");
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:1000/jobs/application",
+        "https://appoga.herokuapp.com/jobs/application",
         myFormData,
       );
 

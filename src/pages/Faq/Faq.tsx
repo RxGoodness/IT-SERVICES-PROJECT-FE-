@@ -12,7 +12,7 @@ const Faqs = () => {
 
   const postQuestion = async () => {
     try {
-      const response = await axios.post("http://localhost:1000/newfaq", {
+      const response = await axios.post("https://appoga.herokuapp.com/newfaq", {
         questions: question,
       });
       console.log(response);
