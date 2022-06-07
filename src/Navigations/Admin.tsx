@@ -25,6 +25,7 @@ const Admin = () => {
       <Route path="/adminFaq" element={<AdminFaq />} />
       <Route path="/dashboard*" element={<Dashboard />} />
       <Route path="/dashboard" element={<Dashboard />}> 
+    
       
       <Route index element={<Overview />} />
             <Route path="pages" element={<Pages />} />
