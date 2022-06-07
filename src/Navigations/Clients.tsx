@@ -19,7 +19,7 @@ import Projects from '../pages/Projects/Projects'
 import Services from '../pages/Services/Services'
 import Footer from '../components/footer/Footer'
 import ResetPassword from '../pages/ResetPassword/ResetPassword'
-import { useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom";
 
 
 
@@ -27,7 +27,7 @@ const Clients = () => {
 
   // const currentURL = window.location.pathname
   const sampleLocation = useLocation();
-  console.log(sampleLocation.pathname, " ..path")
+
   return (
     <div>
       {!sampleLocation.pathname.includes("/reset-password/") && <Navbar />}
