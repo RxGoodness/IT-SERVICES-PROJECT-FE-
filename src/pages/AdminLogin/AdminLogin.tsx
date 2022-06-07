@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { ChangeEvent, FormEvent } from "react";
+import jwtDecode from "jwt-decode";
+import { AuthContext } from "../../context/AdminContext";
 import axios from "axios";
 import LoginNav from "../../components/LoginNavBar/LoginNav";
 import adminCss from "./adminlogin.module.css";
@@ -10,31 +12,58 @@ interface Login {
 }
 
 const Adminlogin = (props: Login) => {
+  const { dispatch } = useContext(AuthContext);
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
-    messageText: "",
-    alert: false,
-    styleType: "",
   });
+  const [error, setError] = useState("");
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
 
+  const login = async () => {
+    try {
+      const response = await axios.post("http://localhost:1000/admin/login", {
+        email: credentials.email,
+        password: credentials.password,
+      });
+
+      // if(response.)
+
+      const token = response.data.token;
+      const userObj = jwtDecode(token);
+      console.log("newUserToken: ", userObj);
+
+      dispatch({ type: "GET_TOKEN", payload: userObj });
+    } catch (error: any) {
+      if (error) {
+        console.log(error.response.data.msg);
+        setError(error.response.data.msg);
+      }
+    }
+  };
+
+  useEffect(() => {
+    setError("");
+  }, [credentials.email, credentials.password]);
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(credentials);
+    login();
   };
 
-  const url = "http://localhost:5000/admin/login";
+  const url = "localhost:1000/admin/login";
 
-  axios
-    .post(url, {
-      email: credentials.email,
-      password: credentials.password,
-    })
-    .then((response) => console.log(response.data));
+  // axios
+  //   .post("http://localhost:1000/admin/login", {
+  //     email: credentials.email,
+  //     password: credentials.password,
+  //   })
+  //   .then((response) => console.log(response.data))
+  //   .catch((err) => console.log(err));
 
   return (
     <div className={adminCss.overallContainer}>
@@ -44,6 +73,7 @@ const Adminlogin = (props: Login) => {
 
       <div className={adminCss.formDesign}>
         <form className={adminCss.formStyle} onSubmit={handleSubmit}>
+          {error && <p>{error}</p>}
           <label htmlFor="email" className={adminCss.inputLabel}>
             Email
           </label>
@@ -78,7 +108,9 @@ const Adminlogin = (props: Login) => {
             <p className={adminCss.lowerChecks}> Forgot password?</p>
           </div>
 
-          <button className={adminCss.btn}>Log In</button>
+          <button type="submit" className={adminCss.btn}>
+            Log In
+          </button>
         </form>
       </div>
     </div>

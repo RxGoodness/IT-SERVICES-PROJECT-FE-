@@ -83,7 +83,7 @@ margin-top: 1rem;
         width: 12rem;
     }
    .jobImage {
-       width: 300px;
+       width: 280px;
        height: 300px; 
        margin-right: 5rem;
    }
@@ -115,6 +115,12 @@ margin-top: 1rem;
 
 .vanish {
     visibility: hidden
+}
+
+.loading {
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 /* Destop size for the second part */
