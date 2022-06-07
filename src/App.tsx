@@ -1,7 +1,7 @@
 import './App.css';
 import ForgetPassword from './pages/ForgetPassword/ForgetPassword';
 import ResetPassword from './pages/ResetPassword/ResetPassword';
-import About from './pages/AboutUs/About';
+import About from './pages/AboutUs/AboutUs';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 

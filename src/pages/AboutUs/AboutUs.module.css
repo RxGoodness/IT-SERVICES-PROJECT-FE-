@@ -1,301 +1,147 @@
-
 .container {
-
     box-sizing: border-box;
-    background: #F1F1F1;
     padding: 0;
     margin: 0;
     height: 100vh;
     width: 100vw;
+    background: #E5E5E5;
+}
 
-    position: relative;
+/* ABOUT US - SECTION */
+
+.aboutAppoga {
+    background: #E5E5E5;
+    max-height: 1052px;
+}
+
+.intro {
     max-width: 100vw;
-    height: auto;
-    background: #F1F1F1;
-    overflow-x: hidden;
-}
-
-
-/* NAVIGATION HEADER */
-
-.header {
+    height: 40%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: #F1F1F1;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 100vw;
-    height: 7.5rem;
+
 }
 
-
-.appogaLogo {
-    position: absolute;
-    left: 5.125rem;
-    top: 0.075rem;
-    width: 15.73rem;
-    height: 5.75rem;
-    background: url('../../assets/images/AboutUs/appoga-logo-b.png');
-}
-
-
-.ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 75vw;
-    min-height: 16rem;
-}
-
-.ul li {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-size: 1.5rem;
-    line-height: 2.25rem;
-    list-style-type: none;
-    text-align: center;
-    font-weight: 400;
-    color: #303030;
-    flex-basis: 0.625;
-}
-
-.home {
-    width: 4.5rem;
-    height: 2.25rem;
-    left: 40.56rem;
-    top: 2.625rem;
-}
-
-.company {
-    width: 7.6875rem;
-    height: 2.25rem;
-    left: 49.1875rem;
-    top: 2.625rem;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: #5F2264;
-}
-
-.services {
-    width: 6.25rem;
-    height: 2.25rem;
-    left: 62.625rem;
-    top: 2.625rem;
-}
-
-.products {
-    width: 6.625rem;
-    height: 2.25rem;
-    left: 74.75rem;
-    top: 2.625rem;
-}
-
-.packages {
-    width: 7.3125rem;
-    height: 2.25rem;
-    left: 87.1875rem;
-    top: 2.625rem;
-}
-
-.resources {
-    width: 7.75rem;
-    height: 2.25rem;
-    left: 100.3125rem;
-    top: 2.625rem;
-}
-
-
-/* ABOUT APPOGA */
-
-.about_appoga {
-    max-width: 51.6%;
-    height: 54rem;
-    left: 0.5rem;
-    top: 0.125rem;
-}
-
-.appoga_special {
-    color: #5F2264;
-}
-
-.about_appoga h3 {
-    position: absolute;
-    white-space: pre;
-    width: 50vw;
-    height: 8.25rem;
-    left: 40vw;
-    top: 10.625rem;
+.intro h4 {
+    max-width: 624px;
+    max-height: 132px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 3.125rem;
-    line-height: 4.6875rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #303030;
+    font-size: 50px;
+    line-height: 75px;
 }
 
-
-.about_appoga .info {
-    position: absolute;
-    width: 50vw;
+.intro .info {
+    margin-top: -2rem;
+    width: 40%;
     height: 120px;
-    left: 22.43rem;
-    top: 18.875rem;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 2.25rem;
     line-height: 3.375rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
     color: #303030;
+    text-align: center;
+}
+
+.pics {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hands {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+    display: flex;
+    gap: 2em;
 }
 
 
-/* .group_pic .pic {
-    position: absolute;
-    height: 17.5rem;
-    filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.25));
-}  */
+.aboutAppogaCustomized {
+    color: #5F2264;
+}
+
 
 .pic_a {
-    position: absolute;
     height: 17.5rem;
     filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.25));
     width: 17.5rem;
-    left: 16.43rem;
-    top: 31.75rem;
     background: url('../../assets/images/AboutUs/pic-a.png');
+    z-index: 1;
     
 }
 
 .pic_b {
-    position: absolute;
     height: 17.5rem;
     filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.25));
     width: 17.5rem;
-    left: 39rem;
-    top: 31.75rem;
     background: url('../../assets/images/AboutUs/pic-b.png');
+    z-index: 1;
 }
 
 .pic_c {
-    position: absolute;
     height: 17.5rem;
     filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.25));
     width: 17.31rem;
-    left: 61.06rem;
-    top: 31.75rem;
     background: url('../../assets/images/AboutUs/pic-c.png');
+    z-index: 1;
 }
 
 .pic_d {
-    position: absolute;
     height: 17.5rem;
     filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.25));
     width: 17.4375rem;
-    left: 27rem;
-    top: 47.12rem;
     background: url('../../assets/images/AboutUs/pic-d.png');
+    transform: translateY(-40%);
 }
 
 .pic_e {
-    position: absolute;
     height: 17.5rem;
     filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.25));
     width: 17.5rem;
-    left: 50.06rem;
-    top: 47.125rem;
     background: url('../../assets/images/AboutUs/pic-e.png');
+    transform: translateY(-40%);
 }
 
 
-/* WE ARE APPOGA */
+/* WE ARE APPOGA - SECTION */
 
-.we_are_appoga {
-    position: absolute;
-    max-width: 1920px;
-    width: 100vw;
-    height: 1052px;
-    left: 0px;
-    top: 1084px;
+.weAreAppoga {
     background: #5F2264;
+    max-height: 1050px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-evenly;
+    gap: 1em;
+    max-width: 100%;
 }
 
-.para1 {
-    width: 462px;
-    height: 400px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
-    color: #F1F1F1;
-    transform: scale(0.8, 0.9) translate(25%, 0);
-    
+.middle {
+    transform: scale(0.8);
+} 
+
+.left {
+    transform: translate(20%, 5%) scale(0.8);
 }
 
-.para2 {
-    width: 462px;
-    height: 386px;
-    left: 162px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
-    color: #F1F1F1;
-    transform: scale(0.8, 0.9) translate(25%, -20%);
-   
+.right {
+    transform: translate(-35%,5%) scale(0.8);
 }
 
-.para3 {
-    width: 462px;
-    height: 350px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
-    color: #F1F1F1;
-    transform: scale(0.8, 1) translate(-25%, 0%);
-}
-
-.para4 {
-    width: 462px;
-    height: 350px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
-    color: #F1F1F1;
-    transform: scale(0.8, 0.9) translate(-25%, -10%);
-}
-
-.hands_together {
-    width: 623px;
-    height: 592px;
+.handsTogether {
     background: url('../../assets/images/AboutUs/pic-f.png');
     filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
-    transform: scale(0.8) translate(-5%, -20%);
+    width: 623px;
+    height: 592px;
+    margin-right: 7rem;
 }
 
-.we_are {
-    width: 624px;
-    height: 132px;
+.weAre {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -303,263 +149,217 @@
     line-height: 75px;
     text-align: center;
     color: #F1F1F1;
-    transform: translateY(50%);
+    transform: translateX(-5%);
+}
+
+.paragraph1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #F1F1F1;
+    margin-bottom: 3em;
+}
+
+.paragraph2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #F1F1F1;
+}
+
+.paragraph3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #F1F1F1;
+}
+
+.paragraph4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #F1F1F1;
+    margin-top: 3em;
 }
 
 
-/* OUR ACHIEVEMEMTS */
+/* OUR ACHIEVEMENTS - SECTION */
+
+.ourAchievements {
+    max-height: 800px;
+    background: #E5E5E5;
+}
 
 .achievements {
-    position: absolute;
-    max-width: 50vw;
-    height: 132px;
-    left: 70vh;
-    top: 1300px;
-    margin-left: -2rem;
+    max-width: 624px;
+    max-height: 132px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
     line-height: 75px;
-    display: flex; 
-    align-items: center;
-    text-align: center;
     color: #303030;
-}
-
-
-.our_achievements {
-    position: relative;
+    transform: translateY(50%);
 }
 
 .stars {
-   position: absolute;
-   display: flex;
-   margin: 0;
-   left: 37%;
-   top: 95rem;
-   width: 10px;
-   height: 10px;
-   align-items: flex-end;
+    gap: 2em;
+    display: flex;
+    transform: translate(-20em, 8em);
 }
 
-.stars img {
-    margin-inline: 1.5rem; 
+.stars:nth-child(1), .stars:nth-child(2), .stars:nth-child(3) {
+    width: 60px;
+    height: 60px;
 }
 
-
-.msg_block {
-    position: relative;
-    top: -55rem;
-    left: -12rem;
-    max-width: 100%;
-    max-height: 62.6rem;
+.ourAchievements > .top {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.msg_block .block_1 {
-    position: absolute;
-    width: 18.75rem;
-    height: 18.75rem;
-    left: 25rem;
-    top: 153.25rem;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2.25rem;
-    line-height: 3.375rem;
+.bottom > .first {
+    display: flex;
 }
 
-.msg_block .block_2 {
-    position: absolute;
-    width: 18.75rem;
-    height: 18.75rem;
-    left: 25rem;
-    top: 178.25rem;
+.bottom > .second {
+    display: flex;
+}
 
+.one, .two, .three, .four, .five, .six {
+    width: 380px;
+    height: 300px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
     line-height: 54px;
     color: #000000;
+    margin: 0 auto;
 }
 
-.msg_block .block_3 {
-    position: absolute;
-    width: 18.75rem;
-    height: 17.5rem;
-    left: 50.625rem;
-    top: 153.25rem;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2.25rem;
-    line-height: 3.375rem;
-    color: #000000;
+.ourAchievements > .bottom {
+    max-width: 90%;
+    margin: 0 auto;
+    transform: scale(0.9) translateY(-40%);
 }
-
-.msg_block .block_4 {
-    position: absolute;
-    width: 18.75rem;
-    height: 17.5rem;
-    left: 50.5rem;
-    top: 178.25rem;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2.25rem;
-    line-height: 3.375rem;
-    color: #000000;
-}
-
-.msg_block .block_5 {
-    position: absolute;
-    width: 18.75rem;
-    height: 17.5rem;
-    left: 78.125rem;
-    top: 153.25rem;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2.25rem;
-    line-height: 3.375rem;
-    color: #000000;
-}
-
-
-.msg_block .block_6 {
-    position: absolute;
-    width: 18.75rem;
-    height: 17.5rem;
-    left: 78.125rem;
-    top: 178.25rem;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2.25rem;
-    line-height: 3.375rem;
-    color: #000000;
-}
-
 
 .ellipse_1 {
-    position: absolute;
-    width: 3.75rem;
-    height: 3.75rem;
-    left: -4.375rem;
-    top: 0.3125rem;
+    width: 60px;
+    height: 60px;
     background: #303030;
-    background: url('../../assets/images/AboutUs/ellipse.png')
+    background: url('../../assets/images/AboutUs/ellipse.png');
+    transform: translate(-3em, 37em);
+}
+
+.ellipse_2 {
+    width: 60px;
+    height: 60px;
+    background: #303030;
+    background: url('../../assets/images/AboutUs/ellipse.png');
+    transform: translate(24em, 32em);
+}
+
+.ellipse_3 {
+    width: 60px;
+    height: 60px;
+    background: #303030;
+    background: url('../../assets/images/AboutUs/ellipse.png');
+    transform: translate(50em, 27em);
+}
+
+.ellipse_4 {
+    width: 60px;
+    height: 60px;
+    background: #303030;
+    background: url('../../assets/images/AboutUs/ellipse.png');
+    transform: translate(24em, 42em);
+}
+
+.ellipse_5 {
+    width: 60px;
+    height: 60px;
+    background: #303030;
+    background: url('../../assets/images/AboutUs/ellipse.png');
+    transform: translate(50em, 37em);
+}
+
+.ellipse_6 {
+    width: 60px;
+    height: 60px;
+    background: #303030;
+    background: url('../../assets/images/AboutUs/ellipse.png');
+    transform: translate(-3em, 32em);
 }
 
 .line_1 {
-    position: absolute;
     width: 700px;
-    height: -700px;
-    left: -400px;
-    top: 380px;
+    height: 0px;
     border: 10px solid #303030;
-    transform: rotate(90deg);
-}
-
-
-.ellipse_2 {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    left: -70px;
-    top: 5px;
-    background: #303030;
-    background: url('../../assets/images/AboutUs/ellipse.png')
+    transform: rotate(90deg) translate(25em, 24em) scale(0.7);
 }
 
 .line_2 {
-    position: absolute;
     width: 700px;
-    height: -700px;
-    left: -5px;
-    top: -20px;
+    height: 0px;
     border: 10px solid #303030;
-    transform: rotate(90deg);
-}
-
-
-.ellipse_3 {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    left: -85px;
-    top: 5px;
-    background: #303030;
-    background: url('../../assets/images/AboutUs/ellipse.png')
+    transform: rotate(90deg) translate(22em, -3em) scale(0.7);
 }
 
 .line_3 {
-    position: absolute;
     width: 700px;
-    height: -700px;
-    left: 30px;
-    top: 380px;
+    height: 0px;
     border: 10px solid #303030;
-    transform: rotate(90deg);
+    transform: rotate(90deg) translate(20em, -29em) scale(0.7);
 }
 
 
-.ellipse_4 {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    left: -85px;
-    top: 5px;
-    background: #303030;
-    background: url('../../assets/images/AboutUs/ellipse.png')
-}
 
+/* WHY JOIN APPOGA - SECTION */
 
-.ellipse_5, .ellipse_6 {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    left: -80px;
-    top: 5px;
-    background: #303030;
-    background: url('../../assets/images/AboutUs/ellipse.png')
-}
-
-
-/* WHY JOIN APPOGA */
-
-.why_join_appoga {
-    position: absolute;
-    width: 100vw;
-    height: 67.5em;
-    left: 0px;
-    top: 202.5em;
+.whyJoinAppoga {
+    height: 900px;
     background: #5F2264;
+}
+
+.whyJoinAppoga .upper {
+    max-height: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.why_join_appoga h3 {
+.whyJoinAppoga .lower {
+    max-height: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.upper h3 {
     max-width: 624px;
-    height: 132px;
+    max-height: 132px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
     line-height: 75px;
-    display: flex;
     text-align: center;
     color: #F1F1F1;
-    height: auto;
 }
 
-
-.why_join_appoga p {
-    max-width: 948px;
-    height: 120px;
+.upper p {
+    max-width: 748px;
+    max-height: 120px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -569,271 +369,230 @@
     align-items: center;
     text-align: center;
     color: #F1F1F1;
+    margin-top: -1em;
 }
 
-.bottom {
-    display: flex;
-    width: 90%;
-    height: 67.5em;
-}
-
-.bottom .left {
-    width: 462px;
-    height: 471px;
+.lower > .left {
+    max-width: 462px;
+    max-height: 471px;
     font-family: 'Poppins';
     font-style: italic;
     font-weight: 700;
     font-size: 72px;
     line-height: 108px;
     color: #F1F1F1;
+    align-self: flex-end;
+}
+
+.lower > .right {
+    max-width: 100%;
+    flex-grow: 2;
+    transform: scale(0.8);
+}
+
+.personal {
+    max-width: 100%;
+    height: 50%;
+    padding-left: 1rem;
+    background: #5F2264;
+    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: #FFFFFF;
     display: flex;
-    align-items: center;
-}
-
-
-.bottom .right div:nth-child(1) {
-    color: #FFFFFF;
-    width: 808px;
-    height: 200px;
-    background: #5F2264;
-    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 54px;
-    margin-block: 1em;
-    padding: 0.5em;
-}
-
-.bottom .right div:nth-child(2) {
-    color: #FFFFFF;
-    width: 808px;
-    height: 100px;
-    background: #5F2264;
-    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 54px;
-    margin-block: 1em;
-    padding: 0.5em;
-}
-
-.bottom .right div:nth-child(3) {
-    color: #FFFFFF;
-    width: 808px;
-    height: 100px;
-    background: #5F2264;
-    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 54px;
-    margin-block: 1em;
-    padding: 0.5em;
-}
-
-.bottom .right div:nth-child(4) {
-    color: #FFFFFF;
-    width: 808px;
-    height: 100px;
-    background: #5F2264;
-    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 54px;
-    margin-block: 1em;
-    padding: 0.5em;
-}
-
-.right_first {
-    display: flex;
-    align-items: center;
+    gap: 2.5em;
+    margin-bottom: 0.5em;
     position: relative;
 }
 
-
-
-.right_first p:nth-child(1) {
-    width: 300px;
-    height: 54px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 54px;
-    color: #FFFFFF;
-    margin-block: 0.5em;
-    margin-top: -8rem;
-    margin-right: 1.9rem;
-    margin-left: -2.2rem;
-    padding: 0.5em;
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-.right_first p:nth-child(2) {
-    width: 350px;
+.personal p:nth-child(2) {
+    max-width: 420px;
     height: 200px;
-    text-align: left;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
     color: #F1F1F1;
-    margin-inline: 0.5em;
+    justify-self: center;
+    transform: scale(1.1) translate(5%, 10%);
 }
 
-
-.p_growth img:nth-child(1) {
-    position: absolute;
-    top: 7rem;
-}
-
-
-.p_growth img:nth-child(2) {
-    position: absolute;
-    top: 9rem;
-}
-
-
-.p_growth img:nth-child(3) {
-    position: absolute;
-    top: 7rem;
-    left: 9.5rem;
-}
-
-
-.why_join_appoga .bottom{
+.career {
+    max-width: 100%;
+    height: 25%;
+    padding-left: 1rem;
+    background: #5F2264;
+    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
     color: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
-    height: 90%;
-    align-items: center;
+    margin-bottom: 0.5em;
+    position: relative;
 }
 
+.new {
+    max-width: 100%;
+    height: 25%;
+    padding-left: 1rem;
+    background: #5F2264;
+    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: #FFFFFF;
+    margin-bottom: 0.5em;
+    position: relative;
 
-/* OUR CORE VALUES */
+}
 
-.core_values {
-    background: #E5E5E5;
+.creating {
+    max-width: 100%;
+    height: 25%;
+    padding-left: 1rem;
+    background: #5F2264;
+    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: #FFFFFF;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+
+.imghead {
+    transform: translate(8em, -38.5em);
+}
+
+.imgbody {
+    transform: translate(5.2em, -37em);
+}
+
+.imgarrow {
+    transform: translate(3.5em, -38em);
+}
+
+.dropdown1 {
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
     position: absolute;
-    width: 100vw;
-    height: 55em;
-    left: 0px;
-    top: 270em;
+    top: 10%;
+    left: 90%;
 }
 
-.core_values h3 {
+.dropdown2, .dropdown3, .dropdown4 {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10%;
+    left: 90%;
+}
+
+
+/* OUR CORE VALUES - SECTION */
+
+.coreValues {
+    background: #E5E5E5;
+    max-height: 900px;
+}
+
+.coreValues .up {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.coreValues .down {
+    max-height: 70%;
+    display: flex;
+}
+
+.up h3 {
+    max-width: 400px;
+    max-height: 132px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
     line-height: 75px;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    justify-content: center;
+    margin-bottom: -1rem;
     color: #303030;
-    width: 624px;
-    height: 132px;
-}
+} 
 
-.core_values p {
-    width: 948px;
-    height: 120px;
+.up p {
+    max-width: 848px;
+    max-height: 120px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
-    display: flex;
-    align-items: center;
+    color: #303030;
     text-align: center;
-    color: #303030;
-    margin: 0 auto;
 }
 
-.animated_icons {
-    margin-block: 4rem;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
-
-.animated_icons div:nth-child(1) {
-    width: 350px;
-    height: 500px;
+.animated_Icon1, 
+.animated_Icon2,
+.animated_Icon3 {
+    width: 462px;
+    height: 540px;
     background: #707070;
-}
-
-.animated_icons div:nth-child(2) {
-    width: 350px;
-    height: 500px;
-    background: #707070;
-}
-
-
-.animated_icons div:nth-child(3) {
-    width: 350px;
-    height: 500px;
-    background: #707070;
-}
-
-
-.animated_icons div {
+    transform: scale(0.7);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    width: 350px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 54px;
-    color: #FFFFFF;
-}
-
-.animated_icon_1 p, .animated_icon_2 p, .animated_icon_3 p {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 2rem;
     align-items: center;
-    width: 16rem;
+    justify-content: space-evenly;
 }
 
-.animated_icons > div > p:nth-child(1) {
-    color: #FFFFFF;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 54px;
-}
 
-.animated_icons > div > p:nth-child(2) {
+.animated_Icon1 h3:nth-of-type(1), 
+.animated_Icon2 h3:nth-of-type(1), 
+.animated_Icon3 h3:nth-of-type(1) {
+    max-width: 340px;
+    max-height: 270px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 54px;
     color: #FFFFFF;
+} 
+
+.animated_Icon1 h3:nth-of-type(2),
+.animated_Icon2 h3:nth-of-type(2),
+.animated_Icon3 h3:nth-of-type(2) {
+    max-width: 250px;
+    max-height: 92px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: #FFFFFF;
 }
 
-.animated_icons > div > p:nth-child(3) {
+.animated_Icon1 h3:nth-of-type(3),
+.animated_Icon2 h3:nth-of-type(3),
+.animated_Icon3 h3:nth-of-type(3) {
+    max-width: 150px;
+    max-height: 178px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -843,34 +602,36 @@
 }
 
 
-/* GET A FREE QUOTE */
+/* GET A FREE QUOTE - SECTION */
 
-.free_quote {
-    position: absolute;
-    left: 0px;
-    top: 5200px;
-    /* width: 1920px; */
-    width: 100vw;
-    height: 1080px;
+.freeQuote {
+    max-width: 100%;
+    height: 900px;
     background: #5F2264;
 }
 
-.free_quote > div {
-    text-align: center;
-    width: 100vw;
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.quote_title > h3 {
+.quote h3 {
+    max-width: 625px;
+    max-height: 132px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
     line-height: 75px;
-    text-align: center;
     color: #F1F1F1;
+    margin-bottom: 0.2em;
 }
 
-.quote_title > p {
+.quote p {
+    max-width: 750px;
+    max-height: 120px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -879,46 +640,48 @@
     color: #FFFFFF;
 }
 
-
-.quote_form {
-    display: flex;
-    width: 100vw;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.quote_form input:nth-of-type(1) {
+.form input:nth-of-type(1) {
     width: 750px;
     height: 100px;
     background: #C4C4C4;
     border-radius: 10px;
-    margin-block: 1.5rem;
 }
 
-.quote_form input:nth-of-type(2) {
+.form input:nth-of-type(2) {
     width: 750px;
     height: 100px;
     background: #C4C4C4;
     border-radius: 10px;
-    margin-block: 1.5rem;
 }
 
-.quote_form textarea {
+.textArea {
     width: 750px;
     height: 200px;
     background: #C4C4C4;
     border-radius: 10px;
-    margin-block: 1.5rem;
 }
 
-
-.quote_form input:nth-of-type(3) {
+.button {
     width: 750px;
     height: 100px;
     background: #F1F1F1;
     border-radius: 5px;
-    margin-block: 1.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button span {
     width: 750px;
     height: 100px;
     font-family: 'Poppins';
@@ -928,156 +691,4 @@
     line-height: 36px;
     color: #5F2264;
 }
-
-.quote_form input:nth-of-type(3):hover {
-    cursor: pointer;
-}
-
-
-/* FOOTER */
-
-.footer {
-    position: absolute;
-    left: 1px;
-    top: 6280px;
-    width: 100vw;
-    height: 1200px;
-    background: #303030;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.social_media_icon {
-    background: #303030;
-    height: 20vh;
-    display: flex;
-    align-items: center;
-    width: 90vw;
-    justify-content: flex-end;
-}
-
-
-.social_media_icon img:nth-child(1) {
-    width: 21px;
-    height: 46.69px;
-    margin-inline: 1em;
-}
-
-.social_media_icon img:nth-child(2) {
-    width: 50px;
-    height: 39.65px;
-    margin-inline: 1em;
-}
-
-.social_media_icon img:nth-child(3) {
-    width: 42px;
-    height: 42px;
-    margin-inline: 1em;
-}
-
-
-.services_tab {
-    height: 90vh;
-    width: 90vw;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.services_tab div > h3 {
-    width: 300px;
-    height: 54px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
-    color: #F1F1F1;
-}
-
-.services_tab p {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
-    color: #F1F1F1;
-}
-
-.footer_service {
-    order: 1;
-}
-
-.footer_saas {
-    order: 2;
-}
-
-.footer_product {
-    order: 3;
-}
-
-.footer_business {
-    order: 4;
-}
-
-.footer_startup {
-    order: 5;
-}
-
-.footer_institution {
-    order: 6;
-}
-
-.footer_company {
-    order: 8;
-}
-
-.footer_sitemap {
-    order: 9;
-}
-
-.footer_tohide {
-    order: 7;
-    visibility: hidden;
-}
-
-.footer_end {
-    width: 748px;
-    height: 184.22px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-@media (max-width: 1200px) {
-    header ul {
-        display: none;
-    }
-   
-}
-
-/* NEW SECTION */
-
-.wrapper {
-    
-}
-
-
-
-
-
-
-
-
-
-
-
 

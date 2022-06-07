@@ -5,6 +5,7 @@ import Snow_Arrow from '../../assets/images/AboutUs/Snow-arrow.png';
 import Facebook from '../../assets/images/AboutUs/facebook.png';
 import Instagram from '../../assets/images/AboutUs/instagram.png';
 import Twitter from '../../assets/images/AboutUs/twitter.png';
+import Dropdown from '../../assets/images/AboutUs/dropdown.png';
 
 
 
@@ -16,6 +17,7 @@ interface IMG {
     Facebook: string;
     Instagram: string;
     Twitter: string;
+    Dropdown: string;
 }
 
 export const Images: IMG = {
@@ -25,5 +27,6 @@ export const Images: IMG = {
     Snow_Arrow,
     Facebook,
     Instagram,
-    Twitter
+    Twitter,
+    Dropdown
 }
