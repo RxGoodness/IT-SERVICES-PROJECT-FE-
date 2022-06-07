@@ -1,0 +1,93 @@
+.details{
+margin: 50px 0 0 50px;
+}
+
+.body{
+    padding: 15px;
+}
+
+.img {
+    display: flex;
+    width: 1300px;
+    margin: auto;
+}
+
+.img h2 {
+    font-size: 50px;
+    padding-bottom: 4rem;
+}
+
+.titled {
+    display: block;
+    text-align: start;
+    margin-top: 7rem;
+    margin-left: 10rem;
+    word-wrap: break-word;
+}
+
+.para {
+    font-size: 18px;
+    background: #5F2264;
+    padding: 1rem;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.briefCase {
+    padding-right: 10px;
+}
+
+.para {
+    margin-bottom: 1rem;
+}
+
+.body {
+    display: block;
+    width: 1400px;
+    margin-top: 7rem;
+    text-align: center;
+}
+
+.description {
+    word-wrap: break-word;
+    flex-wrap: wrap;
+}
+
+.apply {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+.image {
+    width: 600px;
+    height: 600px;
+}
+
+.button{
+    font: inherit;
+    border: 1px solid #4f005f;
+    background: #4f005f;
+    color: white;
+    padding: 1rem 1rem;
+    cursor: pointer; 
+    margin-left: 0.5rem;
+}
+
+.body h2,
+.title h2,
+.button b {
+    font-size: 40px;
+}
+
+.title{
+    padding-top: 3rem;
+    font-size: 30px;
+}

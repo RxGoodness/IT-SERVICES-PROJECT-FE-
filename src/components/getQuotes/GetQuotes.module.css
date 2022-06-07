@@ -1,0 +1,143 @@
+.quotes {
+   background: #5F2264;
+
+}
+
+.quotes_container{
+    width:50%;
+    margin: auto;
+
+}
+
+.quotes_headerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quotes_headerText > h2{
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #F1F1F1;
+    padding: 3rem;
+}
+
+.quotes_headerText > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 36px;
+    color: #FFFFFF;
+    padding: 2rem;
+    text-align: center;
+}
+
+.form_container{
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 1rem;
+
+    
+}
+
+.namePhone {
+    padding-top: 1rem;
+}
+
+ .form_container input {
+    background: #C4C4C4;
+    border-radius: 10px;
+    height: 60px; 
+    font-size: 1rem;
+    border-style: none;
+    padding-left: 15px;
+    width: 100%;
+
+}
+
+.form_container input::placeholder{
+    color: #303030;
+    opacity: 0.5;
+}
+
+.form_container input{
+    display:block;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.wrapper{
+    margin-bottom: 50px;
+}
+
+.textareaMessage{
+    background: #C4C4C4;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 200px; 
+    font-size: 1rem;
+    border-style: none;
+    text-align: left;
+    /* opacity: 0.5; */
+    color: #303030;
+    padding: 15px 0 0 15px;
+
+}
+
+.textareaMessage::placeholder{
+    font-size: 1rem;
+   
+}
+
+.button{
+    width: 100%;
+    background: #F1F1F1;;
+    border-radius: 5px;
+    height: 60px;
+    color:  #411146;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 100px;
+}
+
+.button:hover{
+   background: #928c8c;
+    
+}
+
+.reply {
+    font-size: 1rem;
+    text-align: center;
+    color: #36a936;
+    padding: 15px
+  }
+
+  
+
+
+  @media screen and (max-width: 550px){
+
+    .quotes_headerText > h2{      
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .quotes_headerText > p {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .quotes_container{
+        width: 80%;
+    }
+    
+    
+    
+    }

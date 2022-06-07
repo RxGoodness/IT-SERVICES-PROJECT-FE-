@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Fraunces:opsz@9..144&family=Open+Sans:wght@300&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Fraunces:opsz@9..144&family=Open+Sans:wght@300&family=Poppins&display=swap");
 
 :root {
-  --font-base: 'Poppins';
+  --font-base: "Poppins";
 
-  --primary-color: #5F2264;
-  --secondary-color: #E5E5E5;
-  --lightGray-color: #F1F1F1;
+  --primary-color: #5f2264;
+  --secondary-color: #e5e5e5;
+  --lightGray-color: #f1f1f1;
   --white-color: #ffffff;
   --black-color: #303030;
 }

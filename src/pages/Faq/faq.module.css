@@ -90,7 +90,7 @@ input::placeholder {
 
 } */
 
-h3 {
+.main_container > h3 {
     text-align: center;
 }
 
