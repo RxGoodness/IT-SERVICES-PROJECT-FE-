@@ -1,85 +1,165 @@
 import Styles from './ResetPassword.module.css';
-import { ChangeEvent, FocusEvent, FormEvent, useState } from 'react';
+import { useReducer, ChangeEvent, FocusEvent, FormEvent } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+// @ts-ignore
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 
 
-const PassError = "Password must be at least 8 character, include uppercase, lowercase, digit and special character!";
-const confirmPassError = "Password mismatch!";
-const PasswordRegex = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
+interface IState {
+    password: string;
+    reEnterPassword: string;
+    passwordError: string;
+    confirmPasswordError: string;
+    focusedPassword: boolean;
+    focusedConPassword: boolean;
+}
+
+interface IAction {
+    type: string;
+    payload: string;
+}
+
+
+const initState: IState = {
+    password: '',
+    reEnterPassword: '',
+    passwordError: '',
+    confirmPasswordError: '',
+    focusedPassword: false,
+    focusedConPassword: false
+}
+
+const resetPasswordReducer = (state: IState, action: IAction) => {
+    switch(action.type){
+        case 'CHANGE PASSWORD':
+            return { ...state, password: action.payload }
+        case 'CHANGE RE-ENTER PASSWORD':
+            return { ...state, reEnterPassword: action.payload }
+        case 'FOCUS PASSWORD':
+            return { ...state, focusedPassword: true, passwordError: action.payload }
+        case 'BLUR PASSWORD':
+            return { ...state, focusedPassword: false, passwordError: action.payload }
+        case 'FOCUS CONFIRM PASSWORD':
+            return { ...state, focusedConPassword: true, confirmPasswordError: action.payload }
+        case 'BLUR CONFIRM PASSWORD':
+            return { ...state, focusedConPassword: false, confirmPasswordError: action.payload }
+        default:
+            return state;
+    }
+}
+
+
 
 
 const ResetPassword = () => {
-     
+
+    const PassError = "Password must be at least 8 characters, include uppercase, lowercase, digit and special character!";
+    const confirmPassError = "Password Mismatch";
+    const PasswordRegex = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
+
+
+    const [state, dispatch] = useReducer(resetPasswordReducer, initState);
     const { userId, token } = useParams();
-    const [password, setPassword] = useState('');
-    const [reEnterPassword, setReEnterPassword] = useState('');
-    const [passwordError, setPasswordError] = useState(PassError);
-    const [confirmPasswordError, setConfirmPassError] = useState(confirmPassError);
-    const [redirect, setRedirect] = useState(false);
-    const [focusedPassword, setFocusedPassword] = useState(false);
-    const [focusedConPassword, setFocusedConPassword] = useState(false);
     const navigate = useNavigate();
-    
-  
-    const focusPasswordHandler = (e: FocusEvent<HTMLInputElement>) => {
-        setFocusedPassword(true)
+
+    // DESTRUCTURE ALL STATE VALUES
+
+     const { password, 
+        reEnterPassword, 
+        passwordError, 
+        confirmPasswordError,
+        focusedPassword,
+        focusedConPassword
+    } = state;
+
+
+    // HANDLE INPUT CHANGES
+
+    const handleOldPass = (e: ChangeEvent<HTMLInputElement>) => {
+        dispatch({
+            type: 'CHANGE PASSWORD',
+            payload: e.target.value
+        })
     }
+
+    const handleNewPass = (e: ChangeEvent<HTMLInputElement>) => {
+        dispatch({
+            type: 'CHANGE RE-ENTER PASSWORD',
+            payload: e.target.value
+        })
+    }
+
+    // HANDLE ERRORS
+    const focusPasswordHandler = (e: FocusEvent<HTMLInputElement>) => {
+        dispatch({
+            type: 'FOCUS PASSWORD',
+            payload: PassError
+        })
+    }
+
     const blurPasswordHandler = (e: FocusEvent<HTMLInputElement>) => {
-        setFocusedPassword(false)
+        dispatch({
+            type: 'FOCUS PASSWORD',
+            payload: ''
+        })
     }
 
     const focusConPasswordHandler = (e: FocusEvent<HTMLInputElement>) => {
-        setFocusedConPassword(true)
+        dispatch({
+            type: 'FOCUS CONFIRM PASSWORD',
+            payload: confirmPassError
+        })
     }
+
     const blurConPasswordHandler = (e: FocusEvent<HTMLInputElement>) => {
-        setFocusedConPassword(false)
+        dispatch({
+            type: 'BLUR CONFIRM PASSWORD',
+            payload: ''
+        })
     }
 
 
-    const handleOldPass = (e: ChangeEvent<HTMLInputElement>) => {
-        const oldpass = e.target.value;
-        setPassword(oldpass);
-    }
+    // FORM SUBMIT HANDLER
 
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
-    const handleNewPass = (e: ChangeEvent<HTMLInputElement>) => {
-        const newpass = e.target.value;
-        setReEnterPassword(newpass);
-    }
-
-
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
-
-        const baseUrl = 'http://localhost:4000/reset-password';
+        const url = 'http://localhost:4000/reset-password';
+        const successMsg = 'Password reset was succesful!';
+        const redirectMsg = '...Redirecting to login page...'
+        const errorMsg = 'Error occured...Pls try again later!';
 
         const data = {
             password,
             reEnterPassword
         }   
-      
-        axios.post(`${baseUrl}/${userId}/${token}`, data)
-        .then((response) => {
-            console.log(response.data)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
 
-        setRedirect(true);
+        try {
+            const response = await axios.post(`${url}/${userId}/${token}`, data);
+
+            NotificationManager.success(successMsg);
+            NotificationManager.success(redirectMsg);
+
+            // AUTOMATICALLY REDIRECTS TO LOGIN PAGE AFTER 5 seconds
+
+            setTimeout(() => {
+                navigate('/admin')
+            }, 5000)
+
+        } catch (error) {
+            NotificationManager.error(errorMsg);
+        }
 
     }
 
-    if (redirect) {
-        navigate('/login')
-    }
-
-    
     return (
             <div className={Styles.container}>
+
+                <div className={Styles.error}>
+                    <NotificationContainer />
+                </div>
 
                 <div className={Styles.aside}>
                     <p className={Styles.appogaLogo}></p>
@@ -104,6 +184,7 @@ const ResetPassword = () => {
                                 value={password}
                                 placeholder="New Password"
                                 required
+                                autoComplete="off"
                                 pattern={PasswordRegex}
                                 onBlur={blurPasswordHandler}
                                 onFocus={focusPasswordHandler}
@@ -123,6 +204,7 @@ const ResetPassword = () => {
                                 value={reEnterPassword}
                                 placeholder="Confirm New Password"
                                 pattern={password}
+                                autoComplete="off"
                                 required
                                 onBlur={blurConPasswordHandler}
                                 onFocus={focusConPasswordHandler}
