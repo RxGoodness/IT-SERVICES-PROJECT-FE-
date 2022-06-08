@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useReducer, ChangeEvent, FocusEvent, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 // @ts-ignore
@@ -6,52 +6,102 @@ import { NotificationContainer, NotificationManager } from 'react-notifications'
 import Styles from './ForgetPassword.module.css';
 
 
+interface IState {
+  email: string;
+  focused: boolean;
+  errorMessage: string
+}
+
+interface IAction {
+  type: string;
+  payload: string
+}
+
+const initState: IState = {
+  email: '',
+  focused: false,
+  errorMessage: ''
+}
+
+
+const forgetPasswordReducer = (state: IState, action: IAction) => {
+  switch(action.type){
+      case 'CHANGE EMAIL':
+        return {...state, email: action.payload}
+      case 'FOCUS HANDLER':
+        return {...state, focused: true, errorMessage: action.payload}
+      case 'BLUR HANDLER':
+        return {...state, focused: false, errorMessage: action.payload}
+      default:
+        return state;
+  }
+}
+
 
 const Content = () => {
 
-      const [email, setEmail] = useState('');
-      const [focused, setFocused] = useState(false);
-      const [errorMessage, setErrorMessage] = useState('');
+    const [state, dispatch] = useReducer(forgetPasswordReducer, initState);
 
+    // DESTRUCTURE ALL STATE VALUES
+    const { email, focused, errorMessage } = state;
 
-      const changeEmail = (e: ChangeEvent<HTMLInputElement>) => {
-        const emailVal = e.target.value;
-        setEmail(emailVal);
-      }
+    // HANDLE INPUT CHANGES
+    const changeEmail = (e: ChangeEvent<HTMLInputElement>) => {
+      dispatch({
+        type: 'CHANGE EMAIL',
+        payload: e.target.value
+      })
+    }
 
-      const focusHandler = () => {
-          const emailError = "Email is not valid!"
-          setFocused(true)
-          setErrorMessage(emailError)
-      }
+    // HANDLE ERRORS
+    const focusHandler = (e: FocusEvent<HTMLInputElement>) => {
+      dispatch({
+        type: 'FOCUS HANDLER',
+        payload: 'Email is not valid'
+      })
+    }
 
-      const blurHandler = () => {
-        setFocused(false)
-      }
+    const blurHandler = (e: FocusEvent<HTMLInputElement>) => {
+      dispatch({
+        type: 'BLUR HANDLER',
+        payload: ''
+      })
+    }
 
+    // HANDLE FORM SUBMIT
 
-      const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-
-        const url = 'http://localhost:4000/reset-password/enter-email';
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
         e.preventDefault(); 
 
+        const url = 'http://localhost:4000/reset-password/enter-email';
+        const successMsg = `Password reset link sent to ${email}. Link will be valid for 15 minute!`;
+        const errorMsg1 = 'Email is required!';
+        const errorMsg2 = 'Something went wrong!';
+        const body = { email };
+
         try {
-          const body = { email };
-          !body.email && NotificationManager.error('Email is required!');
-          await axios.post('http://localhost:4000/reset-password/enter-email', body);
-          NotificationManager.success(`Password Reset link sent to ${email}. Link will be valid for 15 min`);
-          
-        } catch (error: any) {
-          error.message ? NotificationManager.error(error.response.data.msg) : NotificationManager.error("Something Went Wrong");
+
+          !body.email && NotificationManager.error(errorMsg1);
+          const result = await axios.post(url, body);
+          NotificationManager.success(successMsg);
+
+        } catch(error: any) {
+
+          error.message ? 
+          NotificationManager.error(error.response.data.msg) : 
+          NotificationManager.error(errorMsg2);
+
         }
 
       }
 
+
+
     return (
 
         <div className={Styles.content}>
-        
+  
               <div className={Styles.error}>
                     <NotificationContainer />
               </div>
