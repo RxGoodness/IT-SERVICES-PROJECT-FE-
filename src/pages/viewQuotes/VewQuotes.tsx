@@ -31,7 +31,6 @@ const ViewQuotes = (props: Props) => {
     fetchData();
   }, []);
 
-  console.log(state)
   return (
     <section className={classes.vWMainContainer}>
       <div className={classes.vWContainer}>
