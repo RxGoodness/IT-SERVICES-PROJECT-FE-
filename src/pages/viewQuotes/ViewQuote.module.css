@@ -39,7 +39,7 @@
 }
 .sort {
   color: rgba(0, 0, 0, 0.5);
-  margin:20px 0
+  margin: 20px 0;
 }
 
 .vQCards {
@@ -47,4 +47,9 @@
   flex-direction: column;
   margin-top: 10px;
   align-content: space-between;
+}
+
+.loaderDiv {
+  align-self: center;
+  justify-items: center;
 }

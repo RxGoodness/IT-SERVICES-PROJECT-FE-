@@ -8,11 +8,10 @@ function App() {
 
   return (
    
-    <>
+ 
      <Navigation />
-    {/* <ViewQuoteCard/> */}
-    {/* <ViewQuotes/> */}
-    </>
+
+   
   
   );
 }
