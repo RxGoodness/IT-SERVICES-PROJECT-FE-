@@ -41,9 +41,9 @@ function ProjectsComponent() {
             
                 <div className={styles.box}>
                     <img src={node} alt="node" />
-                    <img src={react} alt="" />
-                    <img src={html} alt="" />
-                    <img src={css} alt="" />
+                    <img src={react} alt="react" />
+                    <img src={html} alt="html" />
+                    <img src={css} alt="css" />
                 </div>
             </div>
             <div className={styles.project_img}>

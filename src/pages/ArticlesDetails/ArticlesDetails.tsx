@@ -3,7 +3,7 @@ import styles from './ArticlesDetails.module.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import calender from '../../assets/image/calender.png';
-
+import articlesDetailsImage from '../../assets/image/articleDetailsImage.png';
 
 
 interface Article {
@@ -41,8 +41,7 @@ const ArticlesDetails = () => {
 
 
     const {createdAt} = articleData
-
-    const createDate = new Date(createdAt)
+    const createDate = new Date(createdAt).toDateString();
   
 
   return (
@@ -51,12 +50,13 @@ const ArticlesDetails = () => {
           <section className={styles.articleDataContainer}>
           <div className={styles.articlesDataHeader}>
               <h2>{articleData.title}</h2>
-              <img src={calender} alt="" />
-              <h5>{}</h5>
-            
+              <div className={styles.date}>
+                  <img src={calender} alt="" />
+                  <h5>{createDate}</h5>
+              </div>   
           </div>
 
-          <div className={styles.articleImage}><img src="" alt="" /></div>
+          <div className={styles.articleImage}><img src={articlesDetailsImage} alt="" /></div>
           <div className={styles.articleText}><p></p></div>
           <div className={styles.socialLinks}> 
               <ul>
