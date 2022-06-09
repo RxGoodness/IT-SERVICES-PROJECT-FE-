@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { ChangeEvent, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import jwtDecode from "jwt-decode";
 import { AuthContext } from "../../context/AdminContext";
 import axios from "axios";
@@ -12,6 +13,7 @@ interface Login {
 }
 
 const Adminlogin = (props: Login) => {
+  const navigate = useNavigate();
   const { dispatch } = useContext(AuthContext);
   const [credentials, setCredentials] = useState({
     email: "",
@@ -25,10 +27,13 @@ const Adminlogin = (props: Login) => {
 
   const login = async () => {
     try {
-      const response = await axios.post("http://localhost:1000/admin/login", {
-        email: credentials.email,
-        password: credentials.password,
-      });
+      const response = await axios.post(
+        "https://appoga.herokuapp.com/admin/login",
+        {
+          email: credentials.email,
+          password: credentials.password,
+        },
+      );
 
       // if(response.)
 
@@ -37,6 +42,7 @@ const Adminlogin = (props: Login) => {
       console.log("newUserToken: ", userObj);
 
       dispatch({ type: "GET_TOKEN", payload: userObj });
+      navigate("/admin/dashboard");
     } catch (error: any) {
       if (error) {
         console.log(error.response.data.msg);
