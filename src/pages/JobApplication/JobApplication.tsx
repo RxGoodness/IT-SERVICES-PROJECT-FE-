@@ -1,4 +1,5 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import image from "../../assets/images/jobapplication/web-development3.png";
 import toolbox from "../../assets/images/jobapplication/toolbox-icon.png";
@@ -20,12 +21,37 @@ const initialState = {
   profileLink: "",
 };
 
+interface JobDetail {
+  _id: string | null;
+  title: string | null;
+  description: string | null;
+  image: string;
+  location: string | null;
+  employmentType: string | null;
+}
+
 const JobApplication = () => {
   const navigate = useNavigate();
+  const [data, setData] = useState<JobDetail>();
   const [formData, setFormData] = useState(initialState);
   const [cv, setCv] = useState("");
   const [coverLetter, setCoverLetter] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const { id } = useParams<{ id: string }>();
+  console.log(id);
+
+  const getJob = async () => {
+    const response = await axios.get(`https://appoga.herokuapp.com/jobs/${id}`);
+    setData(response.data.data[0]);
+    console.log(response.data.data[0]);
+  };
+
+  useEffect(() => {
+    getJob();
+  }, []);
+
+  console.log(data);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -92,9 +118,9 @@ const JobApplication = () => {
   return (
     <div className={jobAppCss.mainContainer}>
       <div className={jobAppCss.jobTitleContainer}>
-        <img src={image} alt="" className={jobAppCss.jobImage} />
+        <img src={data?.image} alt="" className={jobAppCss.jobImage} />
         <div className={jobAppCss.jobDescription}>
-          <h1 className={jobAppCss.jobTitle}>Web Developer</h1>
+          <h1 className={jobAppCss.jobTitle}>{data?.title}</h1>
           <p style={{ width: 232 }} className={jobAppCss.jobType}>
             <span>
               <img
@@ -104,13 +130,13 @@ const JobApplication = () => {
                 alt=""
               />
             </span>
-            Full-time
+            {data?.employmentType}
           </p>
           <p style={{ width: 232 }} className={jobAppCss.jobLocation}>
             <span>
               <img className={jobAppCss.imgStyle} src={locationIcon} alt="" />
             </span>
-            Abuja Niger
+            {data?.location}
           </p>
         </div>
       </div>
