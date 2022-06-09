@@ -23,31 +23,27 @@ function ProjectsComponent() {
 
   return (
     <div className={styles.container}>
-
-     {
-         
+     {    
          projects.map((project: Record<string, string>)=> {
             
         return (
-
-            
             <div className={styles.project} key={project._id}>
                 <div className={styles.project_text}>
                 <div className={styles.project_content}>
                     <h2>{project.name}</h2>
-                    <p>{project.overview}</p>
+                    <p>{project.overview.substring(0, 100)}</p>
                     <div className={styles.viewCaseStudy}>
                         <h3>View Case Study</h3>
-                        <Link to="/projectDetails/:id" className={styles.link}><img src={arrow} alt="arrow" /></Link> 
+                        <Link to={`/projectDetails/${project._id}`} className={styles.link}><img src={arrow} alt="arrow" /></Link> 
                     </div>
                     
                 </div> 
             
                 <div className={styles.box}>
                     <img src={node} alt="node" />
-                    <img src={react} alt="" />
-                    <img src={html} alt="" />
-                    <img src={css} alt="" />
+                    <img src={react} alt="react" />
+                    <img src={html} alt="html" />
+                    <img src={css} alt="css" />
                 </div>
             </div>
             <div className={styles.project_img}>
