@@ -18,12 +18,19 @@ import ProjectDetails from '../pages/ProjectDetails/ProjectDetails'
 import Projects from '../pages/Projects/Projects'
 import Services from '../pages/Services/Services'
 import Footer from '../components/footer/Footer'
+import ResetPassword from '../pages/ResetPassword/ResetPassword'
+import { useLocation } from "react-router-dom";
+
 
 
 const Clients = () => {
+
+  // const currentURL = window.location.pathname
+  const sampleLocation = useLocation();
+
   return (
     <div>
-      <Navbar />
+      {!sampleLocation.pathname.includes("/reset-password/") && <Navbar />}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<AboutUs />} />
@@ -41,8 +48,10 @@ const Clients = () => {
         <Route path="/partner" element={<Partner />} />
         <Route path="/partner" element={<JoinUs />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/reset-password/:userId/:token" element={<ResetPassword />} />
+       
       </Routes>
-    <Footer />
+      {!sampleLocation.pathname.includes("/reset-password/") && <Footer />}
     </div>
     
   )
