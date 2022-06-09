@@ -1,7 +1,7 @@
 label {
   font-family: Inter;
   font-style: Medium;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   line-height: 124%;
   padding-left: 0.5rem;
@@ -12,9 +12,9 @@ label {
   display: block;
   margin-top: 0.5rem;
   margin-bottom: 2.5rem;
- background-color:#8360801A;
+  background-color: #8360801a;
   height: 53px;
- border: 1px solid #8360801A;
-  border-radius:0.3rem;
+  border: 1px solid #8360801a;
+  border-radius: 0.3rem;
   /* color: #FEFDFE */
 }

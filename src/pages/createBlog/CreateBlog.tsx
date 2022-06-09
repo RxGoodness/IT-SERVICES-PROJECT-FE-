@@ -114,6 +114,7 @@ export const CreateBlog: React.FC = ({}) => {
           name="message"
           onChange={handleTextArea}
           value={input.message}
+          className={classes.textarea}
         ></textarea>
         <AdminInput
           labelText="Description"
@@ -136,6 +137,10 @@ export const CreateBlog: React.FC = ({}) => {
           handle={handleChange}
           value={input.category}
         />
+
+        {input.alert && (
+          <Alert msg={input.alertMessage} style={input.alertType} />
+        )}
         <button type="submit" className={classes.btn}>
           Submit
         </button>

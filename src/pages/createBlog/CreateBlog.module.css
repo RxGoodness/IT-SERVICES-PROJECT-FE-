@@ -1,20 +1,19 @@
 .main_container {
   display: flex;
   justify-content: center;
-
+  width: 60vw;
+padding-left: 10rem; 
 }
 
 .container {
-
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 100px;
   margin-bottom: 100px;
- 
 }
 
-textarea {
+.textarea {
   height: 30vh;
   margin-bottom: 3rem;
   width: 100%;
@@ -37,4 +36,3 @@ textarea {
 .btn:hover {
   background-color: #59155f;
 }
-

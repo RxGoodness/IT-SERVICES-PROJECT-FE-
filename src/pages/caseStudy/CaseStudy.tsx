@@ -6,7 +6,7 @@ import { AdminButton } from "../../components/adminButton/AdminButton";
 import { Alert } from "../../components/alert/AlertComponent";
 import axios from "axios";
 import EditorEditor from "../../components/Editor/Editor";
-import {AdminUpload } from "../../components/AdminUpload/AdminUpload"
+import { AdminUpload } from "../../components/AdminUpload/AdminUpload";
 
 const token =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Iml0c2VydmljZS5saXZlcHJvamVjdEBnbWFpbC5jb20iLCJpYXQiOjE2NTQxMDMwNDF9.C6DKPy0PnoCe-kR5llzN69oXkOgcRxmIoFhVzG2cpTc";
@@ -29,6 +29,7 @@ export const CaseStudy: React.FC = ({}) => {
   const [value, setValue] = useState("");
   const [input, setInput] = useState(initialState);
   const [selectedImage, setSelectedImage] = useState<File | any>();
+  const [image, setImage] = useState("");
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInput({ ...input, [e.target.name]: e.target.value });
@@ -36,11 +37,12 @@ export const CaseStudy: React.FC = ({}) => {
 
   const selectedImageFunc = (e: ChangeEvent<HTMLInputElement>) => {
     setSelectedImage(e.target.files![0]);
+    setImage(e.target.files![0].name);
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { name, description} = input;
+    const { name, description } = input;
     if (!name || !value || !description || selectedImage === undefined) {
       setInput({
         ...input,
@@ -55,7 +57,13 @@ export const CaseStudy: React.FC = ({}) => {
   };
 
   const createFun = async () => {
-    const { name, description} = input;
+    setInput({
+      ...initialState,
+      alert: true,
+      alertMessage: "Creating Project....",
+      alertType: "success",
+    });
+    const { name, description } = input;
 
     const fd = new FormData();
     fd.append("featuredImage", selectedImage);
@@ -72,7 +80,7 @@ export const CaseStudy: React.FC = ({}) => {
           alertMessage: "Project Created....",
           alertType: "success",
         });
-        setValue("")
+        setValue("");
         clearAlertSucess();
       }
     } catch (error) {
@@ -100,55 +108,59 @@ export const CaseStudy: React.FC = ({}) => {
   };
 
   return (
-    <section className = {classes.main_container}>
-    <div className={classes.container}>
-      {input.alert && (
-        <Alert msg={input.alertMessage} style={input.alertType} />
-      )}
+    <section className={classes.main_container}>
+      <div className={classes.container}>
+        {input.alert && (
+          <Alert msg={input.alertMessage} style={input.alertType} />
+        )}
 
-      <div className={classes.header}>
-        <AiOutlineLeft className={classes.arrow} />
-        <p>Post a Case Study</p>
-      </div>
-      <hr />
-      <form onSubmit={handleSubmit} className={classes.form}>
-        <AdminInput
-          labelText={"Project Name"}
-          height={"53px"}
-          name="name"
-          handle={handleChange}
-          value={input.name}
-        />
-        <AdminInput
-          labelText={"Prject Description"}
-          height={"129px"}
-          name="description"
-          handle={handleChange}
-          value={input.description}
-        />
-   {/* text edditor here */}
-
-  <EditorEditor handleEditorChange={setValue} /> 
-   
- 
-
-        {/* text edditor here */}
-
-        <div className={classes.featuredImage}>
-          <p className={classes.featuredText}> Featured Image</p>
-          <div className={classes.imageSection}>
-            <p>
-              This image would be displayed as the banner of the Case Study once
-              published.
-            </p>
-
-            <AdminUpload onChange = {selectedImageFunc}/>
-          </div>
+        <div className={classes.header}>
+          <AiOutlineLeft className={classes.arrow} />
+          <p>Post a Case Study</p>
         </div>
+        <hr className={classes.hr} />
+        <form onSubmit={handleSubmit} className={classes.form}>
+          <AdminInput
+            labelText={"Project Name"}
+            height={"53px"}
+            name="name"
+            handle={handleChange}
+            value={input.name}
+          />
+          <AdminInput
+            labelText={"Project Description"}
+            height={"129px"}
+            name="description"
+            handle={handleChange}
+            value={input.description}
+          />
+          {/* text edditor here */}
 
-        <AdminButton buttonText="Post Case Study" />
-      </form>
-    </div>
+          <EditorEditor handleEditorChange={setValue} />
+
+          {/* text edditor here */}
+
+          <div className={classes.featuredImage}>
+            <p className={classes.featuredText}> Featured Image</p>
+            <div className={classes.imageSection}>
+              <p>
+                This image would be displayed as the banner of the Case Study
+                once published.
+              </p>
+              <div className={classes.adminUpload}>
+                <AdminUpload onChange={selectedImageFunc} />
+                <span>{image}</span>
+              </div>
+            </div>
+          </div>
+
+
+          {input.alert && (
+          <Alert msg={input.alertMessage} style={input.alertType} />
+        )}
+          <AdminButton buttonText="Post Case Study" />
+        </form>
+      </div>
     </section>
   );
 };

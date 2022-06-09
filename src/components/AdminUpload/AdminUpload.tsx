@@ -7,13 +7,18 @@ interface AdminUploadProps {
 }
 
 export const AdminUpload: React.FC<AdminUploadProps> = ({ onChange }) => {
+  
   return (
-    <div className={`${classes.wrapper} ${classes.uploadContainer}`}>
-      <div className={`${classes.btnimg}`}>
-        <FiUploadCloud className={classes.cloud} />
-        <p> Upload</p>
-      </div>
-      <input type="file" accept="image/*" onChange={onChange} />
-    </div>
+     <div className={`${classes.wrapper} ${classes.uploadContainer}`}>
+<div className={`${classes.btnimg}`}>
+  <FiUploadCloud className={classes.cloud} />
+  <p> Upload</p>
+</div>
+<input type="file" accept="image/*" onChange={onChange} />
+</div> 
   );
 };
+
+
+
+

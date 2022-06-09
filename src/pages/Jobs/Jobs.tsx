@@ -36,7 +36,7 @@ const Jobs = () => {
     getJobs()
   }, [])
   return (
-    <main>
+    <main className={JobsCss.main}>
       {/* Hero Section */}
       <section className={JobsCss.hero}>
         <div className={JobsCss.container}>
