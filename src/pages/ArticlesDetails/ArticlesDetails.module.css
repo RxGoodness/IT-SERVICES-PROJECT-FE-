@@ -1,0 +1,25 @@
+.main{
+    background: #E5E5E5;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    
+}
+
+.articleDataContainer{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+.articleDataContainer h2{
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    color: #303030;
+    width: 60%;
+}

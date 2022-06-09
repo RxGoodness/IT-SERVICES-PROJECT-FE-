@@ -7,7 +7,7 @@ import { faBriefcase, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom'
 
 interface Job{
-  id: string | null
+ id: string | null
  title: string | null,
  description: string | null,
  image: string,
