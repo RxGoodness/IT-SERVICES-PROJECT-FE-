@@ -13,6 +13,7 @@ import Faq from "../pages/Faq/Faq";
 import Pages from "../pages/AdminPages/Pages";
 import { CaseStudy } from "../pages/caseStudy/CaseStudy";
 import { CreateBlog } from "../pages/createBlog/CreateBlog";
+import ViewQuotes from "../pages/viewQuotes/VewQuotes";
 
 const Admin = () => {
   return (
@@ -32,6 +33,7 @@ const Admin = () => {
         <Route path="accountsettings" element={<Faq />} />
         <Route path="casestudy" element={<CaseStudy />} />
         <Route path="createblog" element={<CreateBlog />} />
+        <Route path="viewquotes" element={<ViewQuotes />} />
       </Route>
     </Routes>
   );

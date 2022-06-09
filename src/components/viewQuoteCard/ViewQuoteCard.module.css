@@ -1,0 +1,67 @@
+.mainContainer{
+display:flex;
+flex-direction: column;
+background-color: #F4EAF533;
+border-left: 5px solid#836080;
+border-radius: 5px;
+padding:20px 40px 30px 20px; 
+box-shadow: 2px 2px 2px 2px #888888;
+margin-bottom:50px;
+
+}
+
+
+
+.cardHeader{
+display:flex;
+flex-direction: column;
+
+}
+
+.cardHeader hr{
+    margin-top:20px;
+    border-color: #83608080;
+    border-top: 50px;
+    
+}
+
+.headerTitle{
+    display:flex;
+    justify-content: space-around;
+}
+
+.headerTitle p{
+    color: #836080;
+
+}
+
+.headerTitle h3{
+    color: #000000CC;
+
+}
+
+
+.headerTitle div{
+    display:flex;
+    flex-direction: column;
+}
+
+.replyContainer{
+    align-self: flex-end;
+}
+
+.replyContainer p{
+   color: #836080
+}
+
+.mainContentDiv{
+    margin-top:20px;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.mainContentDiv h3{
+margin-bottom:10px;
+color: #836080;
+}

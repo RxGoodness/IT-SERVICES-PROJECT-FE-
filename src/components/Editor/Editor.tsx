@@ -3,7 +3,7 @@ import classes from "./Editor.module.css";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 // import parse from "html-react-parser";
-import { useState, Dispatch, SetStateAction} from "react";
+import {  Dispatch, SetStateAction} from "react";
 
 
 
@@ -46,7 +46,6 @@ const Editor:React.FC<EditorProps> = ({handleEditorChange}) =>{
         onChange={handleEditorChange}
         placeholder="compose here"
         className= {`ql-container ql-editor ${classes.editor}`}
-       
       />
       {/* <p>{value}</p>
       {parse(value)} */}
